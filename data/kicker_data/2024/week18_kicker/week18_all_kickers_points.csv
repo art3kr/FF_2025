@@ -1,0 +1,33 @@
+name,team,year,week,position,xpa,xpm,fga,fgm,fg_distances,fpoints
+Dustin Hopkins,CLE,2024,18,K,1,1,1,1,['23'],4.0
+Justin Tucker,BAL,2024,18,K,5,5,0,0,0,5.0
+Cade York,CIN,2024,18,K,1,1,4,4,"['48', '27', '35', '23']",15.3
+Chris Boswell,PIT,2024,18,K,2,2,1,1,['54'],7.4
+Eddy Piñeiro,CAR,2024,18,K,5,5,1,1,['35'],8.5
+Riley Patterson,ATL,2024,18,K,5,5,2,1,['31'],7.1
+Tyler Bass,BUF,2024,18,K,2,1,1,1,['49'],4.9
+Joey Slye,NWE,2024,18,K,2,2,3,3,"['41', '42', '50']",15.3
+Cairo Santos,CHI,2024,18,K,3,3,1,1,['51'],8.1
+Brandon McManus,GNB,2024,18,K,1,1,3,3,"['37', '30', '55']",13.2
+Cam Little,JAX,2024,18,K,2,2,3,3,"['53', '28', '53']",15.600000000000001
+Matt Gay,IND,2024,18,K,2,2,5,4,"['49', '36', '45', '38']",17.8
+Zane Gonzalez,WAS,2024,18,K,2,2,1,1,['47'],6.7
+Brandon Aubrey,DAL,2024,18,K,1,1,4,4,"['34', '41', '36', '22']",15.1
+Ka'imi Fairbairn,HOU,2024,18,K,3,2,1,1,['27'],4.0
+Matthew Wright,TEN,2024,18,K,0,0,2,2,"['35', '38']",7.3
+Blake Grupe,NOR,2024,18,K,1,1,4,4,"['35', '39', '39', '49']",17.200000000000003
+Chase McLaughlin,TAM,2024,18,K,3,3,2,2,"['52', '25']",11.2
+Graham Gano,NYG,2024,18,K,1,1,2,2,"['25', '53']",9.3
+Jake Elliott,PHI,2024,18,K,2,2,3,2,"['24', '32']",7.199999999999999
+Jake Moody,SFO,2024,18,K,3,3,2,1,['51'],7.1
+Chad Ryland,ARI,2024,18,K,5,5,2,2,"['51', '49']",15.0
+Harrison Butker,KAN,2024,18,K,0,0,1,0,0,-1.0
+Wil Lutz,DEN,2024,18,K,5,5,1,1,['33'],8.3
+Jason Sanders,MIA,2024,18,K,2,2,2,2,"['26', '28']",8.0
+Greg Joseph,NYJ,2024,18,K,3,3,1,1,['20'],6.0
+Cameron Dicker,LAC,2024,18,K,2,2,5,4,"['33', '32', '49', '20']",15.399999999999999
+Daniel Carlson,LVR,2024,18,K,2,2,2,2,"['40', '47']",10.7
+Jason Myers,SEA,2024,18,K,3,3,1,1,['56'],8.6
+Joshua Karty,LAR,2024,18,K,1,1,4,4,"['37', '58', '57', '38']",20.0
+Will Reichard,MIN,2024,18,K,0,0,4,3,"['25', '31', '51']",10.2
+Jake Bates,DET,2024,18,K,4,4,1,1,['48'],8.8

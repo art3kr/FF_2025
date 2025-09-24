@@ -1,0 +1,17 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2019,13,Chicago Bears,Detroit Lions,2019-11-28,12:30PM,Detroit,/boxscores/201911280det.htm,Lions (deferred),,dome,fieldturf,3:23,"65,412",Chicago Bears -5.5,37.5 (over),,,
+2019,13,Buffalo Bills,Dallas Cowboys,2019-11-28,4:30PM,Dallas,/boxscores/201911280dal.htm,Bills (deferred),,retractable roof (closed),fieldturf,3:11,"90,445",Dallas Cowboys -6.5,46.5 (under),,,
+2019,13,New Orleans Saints,Atlanta Falcons,2019-11-28,8:20PM,Atlanta,/boxscores/201911280atl.htm,Falcons,,retractable roof (closed),fieldturf,3:12,"71,993",New Orleans Saints -7.0,48.0 (under),,,
+2019,13,Washington Redskins,Carolina Panthers,2019-12-01,1:00PM,Carolina,/boxscores/201912010car.htm,Redskins (deferred),,outdoors,grass,3:32,"71,504",Carolina Panthers -10.5,38.5 (over),64 degrees, relative humidity 77%, wind 16 mph
+2019,13,Cincinnati Bengals,New York Jets,2019-12-01,1:00PM,Cincinnati,/boxscores/201912010cin.htm,Jets,,outdoors,grass,3:11,"39,804",New York Jets -2.5,43.0 (under),46 degrees, relative humidity 77%, wind 15 mph
+2019,13,Pittsburgh Steelers,Cleveland Browns,2019-12-01,1:00PM,Pittsburgh,/boxscores/201912010pit.htm,Steelers (deferred),,outdoors,grass,3:10,"62,157",Cleveland Browns -1.0,40.0 (under),46 degrees, relative humidity 91%, wind 6 mph
+2019,13,Tennessee Titans,Indianapolis Colts,2019-12-01,1:00PM,Indianapolis,/boxscores/201912010clt.htm,Colts (deferred),,retractable roof (closed),fieldturf,3:07,"60,361",Tennessee Titans -1.0,41.5 (over),,,
+2019,13,Green Bay Packers,New York Giants,2019-12-01,1:00PM,New York,/boxscores/201912010nyg.htm,Packers (deferred),,outdoors,fieldturf ,2:56,"75,950",Green Bay Packers -6.5,43.5 (over),32 degrees, relative humidity 86%, wind 10 mph
+2019,13,Tampa Bay Buccaneers,Jacksonville Jaguars,2019-12-01,1:00PM,Jacksonville,/boxscores/201912010jax.htm,Jaguars (deferred),,outdoors,grass,3:20,"62,633",Tampa Bay Buccaneers -3.0,46.5 (under),,,
+2019,13,Miami Dolphins,Philadelphia Eagles,2019-12-01,1:00PM,Miami,/boxscores/201912010mia.htm,Eagles (deferred),,outdoors,grass,3:27,"65,545",Philadelphia Eagles -10.5,45.0 (over),,,
+2019,13,Baltimore Ravens,San Francisco 49ers,2019-12-01,1:00PM,Baltimore,/boxscores/201912010rav.htm,Ravens (deferred),,outdoors,grass,2:56,"71,029",Baltimore Ravens -5.5,45.0 (under),40 degrees, relative humidity 91%, wind 13 mph
+2019,13,Los Angeles Rams,Arizona Cardinals,2019-12-01,4:05PM,Arizona,/boxscores/201912010crd.htm,Cardinals (deferred),,retractable roof (closed),grass,3:01,"60,944",Los Angeles Rams -2.5,47.0 (under),,,
+2019,13,Denver Broncos,Los Angeles Chargers,2019-12-01,4:25PM,Denver,/boxscores/201912010den.htm,Chargers (deferred),,outdoors,grass,3:01,"74,638",Los Angeles Chargers -4.5,39.0 (over),33 degrees, relative humidity 51%, wind 7 mph
+2019,13,Kansas City Chiefs,Oakland Raiders,2019-12-01,4:25PM,Kansas City,/boxscores/201912010kan.htm,Chiefs (deferred),,outdoors,grass,2:53,"73,548",Kansas City Chiefs -11.5,49.5 (under),36 degrees, relative humidity 55%, wind 20 mph
+2019,13,Houston Texans,New England Patriots,2019-12-01,8:20PM,Houston,/boxscores/201912010htx.htm,Patriots (deferred),,retractable roof (closed),grass,3:16,"72,025",New England Patriots -3.5,47.0 (over),,,
+2019,13,Seattle Seahawks,Minnesota Vikings,2019-12-02,8:15PM,Seattle,/boxscores/201912020sea.htm,Vikings (deferred),,outdoors,fieldturf,3:13,"69,080",Seattle Seahawks -2.5,48.0 (over),51 degrees, relative humidity 65%, wind 1 mph

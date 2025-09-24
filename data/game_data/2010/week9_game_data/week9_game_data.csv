@@ -1,0 +1,14 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2010,9,Atlanta Falcons,Tampa Bay Buccaneers,2010-11-07,1:02PM,Atlanta,/boxscores/201011070atl.htm,Falcons,,dome,fieldturf ,2:55,"67,266",Atlanta Falcons -9.0,45.5 (over),,,
+2010,9,Chicago Bears,Buffalo Bills,2010-11-07,1:02PM,Buffalo,/boxscores/201011070buf.htm,Bills (deferred),,dome,astroplay ,3:10,"50,746",Chicago Bears -3.0,41.5 (under),,,
+2010,9,Cleveland Browns,New England Patriots,2010-11-07,1:02PM,Cleveland,/boxscores/201011070cle.htm,Browns,,outdoors,grass ,2:51,"66,292",New England Patriots -4.0,43.5 (over),43 degrees, relative humidity 0%, wind 13 mph
+2010,9,San Diego Chargers,Houston Texans,2010-11-07,1:02PM,Houston,/boxscores/201011070htx.htm,Chargers,,retractable roof (open),grass ,3:02,"70,886",San Diego Chargers -3.0,49.5 (over),,,
+2010,9,Baltimore Ravens,Miami Dolphins,2010-11-07,1:02PM,Baltimore,/boxscores/201011070rav.htm,Dolphins (deferred),,outdoors,fieldturf ,2:49,"71,305",Baltimore Ravens -5.0,41.0 (under),50 degrees, relative humidity 38%, wind 11 mph
+2010,9,New York Jets,Detroit Lions,2010-11-07,1:03PM,Detroit,/boxscores/201011070det.htm,Lions,Jets,dome,fieldturf ,3:25,"57,799",New York Jets -5.5,42.0 (over),,,
+2010,9,New Orleans Saints,Carolina Panthers,2010-11-07,1:04PM,Carolina,/boxscores/201011070car.htm,Saints,,outdoors,grass ,3:14,"73,191",New Orleans Saints -6.5,40.5 (under),50 degrees, relative humidity 33%, wind 7 mph
+2010,9,Minnesota Vikings,Arizona Cardinals,2010-11-07,1:05PM,Minnesota,/boxscores/201011070min.htm,Cardinals,Cardinals,dome,sportturf,3:16,"64,120",Minnesota Vikings -7.5,42.5 (over),,,
+2010,9,New York Giants,Seattle Seahawks,2010-11-07,4:05PM,Seattle,/boxscores/201011070sea.htm,Seahawks,,outdoors,fieldturf ,2:54,"67,287",New York Giants -7.5,40.5 (over),55 degrees, relative humidity 0%," wind 15 mph, wind chill 0"
+2010,9,Oakland Raiders,Kansas City Chiefs,2010-11-07,4:15PM,Oakland,/boxscores/201011070rai.htm,Raiders (deferred),Chiefs,outdoors,grass ,3:46,"61,075",Pick,41.0 (over),62 degrees, relative humidity 82%," wind 9 mph, wind chill 0"
+2010,9,Philadelphia Eagles,Indianapolis Colts,2010-11-07,4:16PM,Philadelphia,/boxscores/201011070phi.htm,Eagles,,outdoors,grass ,3:32,"69,144",Philadelphia Eagles -3.0,47.0 (over),52 degrees, relative humidity 34%," wind 18 mph, wind chill 0"
+2010,9,Green Bay Packers,Dallas Cowboys,2010-11-07,8:30PM,Green Bay,/boxscores/201011070gnb.htm,Cowboys,,outdoors,grass ,2:57,"70,913",Green Bay Packers -7.0,45.5 (over),43 degrees, relative humidity 62%, wind 3 mph
+2010,9,Pittsburgh Steelers,Cincinnati Bengals,2010-11-08,8:40PM,Cincinnati,/boxscores/201011080cin.htm,Steelers (deferred),,outdoors,fieldturf ,3:06,"65,626",Pittsburgh Steelers -5.5,41.5 (over),44 degrees, relative humidity 65%, wind 2 mph

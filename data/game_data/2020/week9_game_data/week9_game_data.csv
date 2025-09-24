@@ -1,0 +1,15 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2020,9,Green Bay Packers,San Francisco 49ers,2020-11-05,8:20PM,San Francisco,/boxscores/202011050sfo.htm,49ers (deferred),,outdoors,grass,3:02,,Green Bay Packers -6.0,48.5 (over),78 degrees, relative humidity 83%, wind 5 mph
+2020,9,Baltimore Ravens,Indianapolis Colts,2020-11-08,1:00PM,Indianapolis,/boxscores/202011080clt.htm,Ravens (deferred),,retractable roof (closed),fieldturf,3:03,"12,200",Indianapolis Colts -1.0,47.5 (under),,,
+2020,9,Minnesota Vikings,Detroit Lions,2020-11-08,1:00PM,Minnesota,/boxscores/202011080min.htm,Vikings (deferred),,dome,sportturf,2:59,,Minnesota Vikings -3.0,51.5 (over),,,
+2020,9,Houston Texans,Jacksonville Jaguars,2020-11-08,1:00PM,Jacksonville,/boxscores/202011080jax.htm,Jaguars,,outdoors,grass,3:11,"15,668",Houston Texans -7.0,49.0 (over),79 degrees, relative humidity 71%, wind 14 mph
+2020,9,Atlanta Falcons,Denver Broncos,2020-11-08,1:00PM,Atlanta,/boxscores/202011080atl.htm,Broncos (deferred),,retractable roof (closed),fieldturf,3:14,"7,665",Atlanta Falcons -4.5,50.5 (over),,,
+2020,9,Buffalo Bills,Seattle Seahawks,2020-11-08,1:00PM,Buffalo,/boxscores/202011080buf.htm,Seahawks (deferred),,outdoors,astroturf,3:15,,Seattle Seahawks -3.0,55.5 (over),69 degrees, relative humidity 41%, wind 4 mph
+2020,9,Kansas City Chiefs,Carolina Panthers,2020-11-08,1:00PM,Kansas City,/boxscores/202011080kan.htm,Panthers,,outdoors,grass,3:20,"12,073",Kansas City Chiefs -10.0,51.5 (over),71 degrees, relative humidity 63%, wind 19 mph
+2020,9,Tennessee Titans,Chicago Bears,2020-11-08,1:00PM,Tennessee,/boxscores/202011080oti.htm,Bears (deferred),,outdoors,grass,3:07,"13,871",Tennessee Titans -6.5,46.5 (under),77 degrees, relative humidity 55%, wind 14 mph
+2020,9,New York Giants,Washington Football Team,2020-11-08,1:00PM,Washington Football,/boxscores/202011080was.htm,Football Team (deferred),,outdoors,grass,2:57,"3,000",Washington Football Team -3.0,43.5 (under),75 degrees, relative humidity 49%, wind 1 mph
+2020,9,Las Vegas Raiders,Los Angeles Chargers,2020-11-08,4:05PM,Los Angeles,/boxscores/202011080sdg.htm,Raiders (deferred),,dome,matrixturf,3:08,,Las Vegas Raiders -1.0,52.5 (over),,,
+2020,9,Miami Dolphins,Arizona Cardinals,2020-11-08,4:25PM,Arizona,/boxscores/202011080crd.htm,Cardinals (deferred),,retractable roof (closed),grass,3:09,"4,200",Arizona Cardinals -6.0,49.0 (over),,,
+2020,9,Pittsburgh Steelers,Dallas Cowboys,2020-11-08,4:25PM,Dallas,/boxscores/202011080dal.htm,Cowboys (deferred),,retractable roof (closed),fieldturf,3:15,"31,700",Pittsburgh Steelers -14.0,44.0 (under),,,
+2020,9,New Orleans Saints,Tampa Bay Buccaneers,2020-11-08,8:20PM,Tampa Bay,/boxscores/202011080tam.htm,Saints (deferred),,outdoors,grass,2:51,"15,740",Tampa Bay Buccaneers -3.0,51.0 (under),77 degrees, relative humidity 76%, wind 17 mph
+2020,9,New England Patriots,New York Jets,2020-11-09,8:15PM,New York,/boxscores/202011090nyj.htm,Patriots (deferred),,outdoors,fieldturf ,2:54,,New England Patriots -9.0,42.0 (over),61 degrees, relative humidity 72%, wind 2 mph

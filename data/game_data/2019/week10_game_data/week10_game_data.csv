@@ -1,0 +1,14 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2019,10,Oakland Raiders,Los Angeles Chargers,2019-11-07,8:20PM,Oakland,/boxscores/201911070rai.htm,Chargers,,outdoors,grass,3:13,"51,954",Los Angeles Chargers -1.0,49.0 (over),54 degrees, relative humidity 84%, wind 9 mph
+2019,10,Atlanta Falcons,New Orleans Saints,2019-11-10,1:00PM,New Orleans,/boxscores/201911100nor.htm,Falcons,,dome,astroturf,3:10,"73,283",New Orleans Saints -14.0,51.5 (under),,,
+2019,10,Cleveland Browns,Buffalo Bills,2019-11-10,1:00PM,Cleveland,/boxscores/201911100cle.htm,Bills (deferred),,outdoors,grass,3:14,"67,431",Cleveland Browns -3.0,42.0 (under),,,
+2019,10,Chicago Bears,Detroit Lions,2019-11-10,1:00PM,Chicago,/boxscores/201911100chi.htm,Bears (deferred),,outdoors,grass,3:07,"61,758",Chicago Bears -6.0,38.0 (under),40 degrees, relative humidity 80%, wind 12 mph
+2019,10,Baltimore Ravens,Cincinnati Bengals,2019-11-10,1:00PM,Cincinnati,/boxscores/201911100cin.htm,Bengals (deferred),,outdoors,grass,2:50,"45,918",Baltimore Ravens -10.5,44.0 (over),56 degrees, relative humidity 53%, wind 9 mph
+2019,10,Tampa Bay Buccaneers,Arizona Cardinals,2019-11-10,1:00PM,Tampa Bay,/boxscores/201911100tam.htm,Cardinals (deferred),,outdoors,grass,3:23,"40,038",Tampa Bay Buccaneers -5.5,51.0 (over),77 degrees, relative humidity 53%, wind 8 mph
+2019,10,Tennessee Titans,Kansas City Chiefs,2019-11-10,1:00PM,Tennessee,/boxscores/201911100oti.htm,Titans (deferred),,outdoors,grass,3:12,"68,864",Kansas City Chiefs -5.0,49.0 (over),63 degrees, relative humidity 35%, wind 9 mph
+2019,10,New York Jets,New York Giants,2019-11-10,1:00PM,New York,/boxscores/201911100nyj.htm,Jets,,outdoors,fieldturf ,3:11,"78,523",New York Giants -3.0,43.0 (over),48 degrees, relative humidity 50%, wind 8 mph
+2019,10,Miami Dolphins,Indianapolis Colts,2019-11-10,4:05PM,Indianapolis,/boxscores/201911100clt.htm,Colts (deferred),,retractable roof (closed),fieldturf,3:02,"60,510",Indianapolis Colts -11.0,44.5 (under),,,
+2019,10,Green Bay Packers,Carolina Panthers,2019-11-10,4:25PM,Green Bay,/boxscores/201911100gnb.htm,Packers (deferred),,outdoors,grass,3:17,"78,090",Green Bay Packers -5.0,49.0 (under),,,
+2019,10,Pittsburgh Steelers,Los Angeles Rams,2019-11-10,4:25PM,Pittsburgh,/boxscores/201911100pit.htm,Rams (deferred),,outdoors,grass,3:32,"63,627",Los Angeles Rams -4.0,43.0 (under),55 degrees, relative humidity 44%, wind 12 mph
+2019,10,Minnesota Vikings,Dallas Cowboys,2019-11-10,8:20PM,Dallas,/boxscores/201911100dal.htm,Vikings (deferred),,retractable roof (closed),fieldturf,3:02,"91,188",Dallas Cowboys -3.5,48.5 (over),,,
+2019,10,Seattle Seahawks,San Francisco 49ers,2019-11-11,8:15PM,San Francisco,/boxscores/201911110sfo.htm,Seahawks (deferred),Seahawks,outdoors,grass,3:49,"71,404",San Francisco 49ers -6.5,47.0 (over),77 degrees, relative humidity 32%, wind 3 mph

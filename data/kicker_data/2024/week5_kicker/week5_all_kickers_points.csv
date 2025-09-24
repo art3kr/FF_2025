@@ -1,0 +1,30 @@
+name,team,year,week,position,xpa,xpm,fga,fgm,fg_distances,fpoints
+Chase McLaughlin,TAM,2024,5,K,3,3,3,3,"['53', '32', '53']",16.8
+Younghoe Koo,ATL,2024,5,K,3,3,5,3,"['54', '48', '52']",16.4
+Greg Zuerlein,NYJ,2024,5,K,2,2,1,1,['32'],5.2
+Will Reichard,MIN,2024,5,K,2,2,3,3,"['54', '53', '41']",16.799999999999997
+Tyler Bass,BUF,2024,5,K,2,2,2,2,"['38', '33']",9.1
+Ka'imi Fairbairn,HOU,2024,5,K,2,2,3,3,"['50', '47', '59']",17.6
+Eddy Pineiro,CAR,2024,5,K,1,1,2,1,['27'],3.0
+Cairo Santos,CHI,2024,5,K,4,3,1,1,['33'],5.3
+Justin Tucker,BAL,2024,5,K,5,5,2,2,"['56', '24']",13.6
+Evan McPherson,CIN,2024,5,K,4,4,1,0,0,3.0
+Dustin Hopkins,CLE,2024,5,K,1,1,2,2,"['51', '31']",9.2
+Austin Seibert,WAS,2024,5,K,4,4,2,2,"['27', '30']",10.0
+Matt Gay,IND,2024,5,K,4,4,2,2,"['30', '37']",10.7
+Cam Little,JAX,2024,5,K,4,4,3,3,"['23', '30', '49']",14.9
+Jason Sanders,MIA,2024,5,K,0,0,4,3,"['54', '32', '47']",12.3
+Joey Slye,NWE,2024,5,K,1,1,2,1,['38'],3.8
+Chad Ryland,ARI,2024,5,K,1,1,4,3,"['30', '42', '35']",10.7
+Jake Moody,SFO,2024,5,K,2,2,2,2,"['28', '20']",8.0
+Mitch Wishnowsky,SFO,2024,5,K,0,0,1,1,['26'],3.0
+Daniel Carlson,LVR,2024,5,K,1,1,1,1,['40'],5.0
+Wil Lutz,DEN,2024,5,K,4,4,2,2,"['51', '44']",13.5
+Brayden Narveson,GNB,2024,5,K,3,3,1,1,['46'],7.6
+Joshua Karty,LAR,2024,5,K,2,1,0,0,0,0.0
+Greg Joseph,NYG,2024,5,K,2,2,3,3,"['38', '31', '24']",11.9
+Jason Myers,SEA,2024,5,K,2,2,3,2,"['43', '48']",10.1
+Brandon Aubrey,DAL,2024,5,K,2,2,3,2,"['55', '33']",9.8
+Chris Boswell,PIT,2024,5,K,2,2,1,1,['41'],6.1
+Blake Grupe,NOR,2024,5,K,2,1,0,0,0,0.0
+Harrison Butker,KAN,2024,5,K,2,2,5,4,"['26', '34', '28', '38']",14.2

@@ -1,0 +1,15 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2021,13,Dallas Cowboys,New Orleans Saints,2021-12-02,8:20PM,New Orleans,/boxscores/202112020nor.htm,Cowboys (deferred),,dome,sportturf,3:12,"69,170",Dallas Cowboys -5.0,47.5 (under),,,
+2021,13,Tampa Bay Buccaneers,Atlanta Falcons,2021-12-05,1:00PM,Atlanta,/boxscores/202112050atl.htm,Falcons (deferred),,retractable roof (closed),fieldturf,3:03,"69,366",Tampa Bay Buccaneers -10.5,50.5 (under),,,
+2021,13,Arizona Cardinals,Chicago Bears,2021-12-05,1:00PM,Chicago,/boxscores/202112050chi.htm,Cardinals (deferred),,outdoors,grass ,3:04,"60,803",Arizona Cardinals -7.5,42.0 (over),34 degrees, relative humidity 80%, wind 8 mph
+2021,13,Los Angeles Chargers,Cincinnati Bengals,2021-12-05,1:00PM,Cincinnati,/boxscores/202112050cin.htm,Bengals (deferred),,outdoors,fieldturf ,3:20,"51,414",Cincinnati Bengals -3.0,49.5 (over),48 degrees, relative humidity 51%, wind 11 mph
+2021,13,Detroit Lions,Minnesota Vikings,2021-12-05,1:00PM,Detroit,/boxscores/202112050det.htm,Lions (deferred),,dome,fieldturf ,3:10,"45,691",Minnesota Vikings -7.0,46.5 (over),,,
+2021,13,Philadelphia Eagles,New York Jets,2021-12-05,1:00PM,New York,/boxscores/202112050nyj.htm,Eagles (deferred),,outdoors,fieldturf ,3:06,"73,311",Philadelphia Eagles -5.0,43.5 (over),45 degrees, relative humidity 33%, no wind
+2021,13,Indianapolis Colts,Houston Texans,2021-12-05,1:00PM,Houston,/boxscores/202112050htx.htm,Colts (deferred),,retractable roof (closed),astroturf,2:55,"65,291",Indianapolis Colts -10.0,44.5 (under),,,
+2021,13,Miami Dolphins,New York Giants,2021-12-05,1:00PM,Miami,/boxscores/202112050mia.htm,Dolphins (deferred),,outdoors,grass ,3:00,"65,898",Miami Dolphins -6.5,39.5 (under),80 degrees, relative humidity 62%, wind 11 mph
+2021,13,Seattle Seahawks,San Francisco 49ers,2021-12-05,4:00PM,Seattle,/boxscores/202112050sea.htm,49ers (deferred),,outdoors,fieldturf ,3:13,"68,758",San Francisco 49ers -3.5,45.5 (over),41 degrees, relative humidity 76%, wind 4 mph
+2021,13,Washington Football Team,Las Vegas Raiders,2021-12-05,4:05PM,Las Vegas,/boxscores/202112050rai.htm,Raiders (deferred),,dome,grass,3:01,"61,607",Las Vegas Raiders -1.5,48.0 (under),,,
+2021,13,Los Angeles Rams,Jacksonville Jaguars,2021-12-05,4:25PM,Los Angeles,/boxscores/202112050ram.htm,Jaguars (deferred),,dome,matrixturf,2:53,"70,801",Los Angeles Rams -13.0,48.0 (under),,,
+2021,13,Pittsburgh Steelers,Baltimore Ravens,2021-12-05,4:25PM,Pittsburgh,/boxscores/202112050pit.htm,Steelers (deferred),,outdoors,grass ,3:10,"59,303",Baltimore Ravens -4.5,44.0 (under),50 degrees, relative humidity 44%, wind 7 mph
+2021,13,Kansas City Chiefs,Denver Broncos,2021-12-05,8:20PM,Kansas City,/boxscores/202112050kan.htm,Broncos,,outdoors,grass ,2:54,"73,185",Kansas City Chiefs -9.5,47.0 (under),58 degrees, relative humidity 55%, wind 22 mph
+2021,13,New England Patriots,Buffalo Bills,2021-12-06,8:15PM,Buffalo,/boxscores/202112060buf.htm,Bills (deferred),,outdoors,a_turf,2:55,"69,694",Buffalo Bills -4.0,44.0 (under),36 degrees, relative humidity 59%, wind 19 mph

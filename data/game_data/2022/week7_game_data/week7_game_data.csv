@@ -1,0 +1,15 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2022,7,Arizona Cardinals,New Orleans Saints,2022-10-20,8:15PM,Arizona,/boxscores/202210200crd.htm,Saints,,retractable roof (open),grass ,3:17,"63,290",Arizona Cardinals -2.5,44.0 (over),,,
+2022,7,Cincinnati Bengals,Atlanta Falcons,2022-10-23,1:00PM,Cincinnati,/boxscores/202210230cin.htm,Bengals,,outdoors,fieldturf ,2:49,"66,158",Cincinnati Bengals -6.5,47.0 (over),73 degrees, relative humidity 43%, wind 7 mph
+2022,7,Carolina Panthers,Tampa Bay Buccaneers,2022-10-23,1:00PM,Carolina,/boxscores/202210230car.htm,Buccaneers,,outdoors,grass ,2:44,"71,941",Tampa Bay Buccaneers -13.0,39.5 (under),67 degrees, relative humidity 51%, wind 5 mph
+2022,7,Baltimore Ravens,Cleveland Browns,2022-10-23,1:00PM,Baltimore,/boxscores/202210230rav.htm,Ravens (deferred),,outdoors,grass,2:55,"70,461",Baltimore Ravens -6.5,45.5 (under),64 degrees, relative humidity 59%, wind 6 mph
+2022,7,Tennessee Titans,Indianapolis Colts,2022-10-23,1:00PM,Tennessee,/boxscores/202210230oti.htm,Colts (deferred),,outdoors,grass ,2:51,"69,459",Tennessee Titans -2.5,41.5 (under),74 degrees, relative humidity 43%, wind 12 mph
+2022,7,Dallas Cowboys,Detroit Lions,2022-10-23,1:00PM,Dallas,/boxscores/202210230dal.htm,Cowboys,,retractable roof (closed),matrixturf,2:48,"93,487",Dallas Cowboys -6.5,49.0 (under),,,
+2022,7,Washington Commanders,Green Bay Packers,2022-10-23,1:00PM,Washington,/boxscores/202210230was.htm,Commanders (deferred),,outdoors,grass ,3:21,"60,427",Green Bay Packers -4.5,41.5 (over),62 degrees, relative humidity 66%, wind 7 mph
+2022,7,New York Giants,Jacksonville Jaguars,2022-10-23,1:00PM,Jacksonville,/boxscores/202210230jax.htm,Jaguars (deferred),,outdoors,grass ,3:29,"65,664",Jacksonville Jaguars -3.0,43.5 (under),,,
+2022,7,Las Vegas Raiders,Houston Texans,2022-10-23,4:05PM,Las Vegas,/boxscores/202210230rai.htm,Texans (deferred),,dome,grass,2:50,"61,228",Las Vegas Raiders -7.0,46.0 (over),,,
+2022,7,New York Jets,Denver Broncos,2022-10-23,4:05PM,Denver,/boxscores/202210230den.htm,Broncos (deferred),,outdoors,grass ,3:18,"76,624",New York Jets -1.5,37.0 (under),,,
+2022,7,Kansas City Chiefs,San Francisco 49ers,2022-10-23,4:25PM,San Francisco,/boxscores/202210230sfo.htm,49ers,,outdoors,grass,3:05,"71,746",Kansas City Chiefs -1.0,49.0 (over),64 degrees, relative humidity 34%, wind 10 mph
+2022,7,Seattle Seahawks,Los Angeles Chargers,2022-10-23,4:25PM,Los Angeles,/boxscores/202210230sdg.htm,Chargers (deferred),,dome,matrixturf,3:19,"70,240",Los Angeles Chargers -4.5,50.5 (over),,,
+2022,7,Miami Dolphins,Pittsburgh Steelers,2022-10-23,8:20PM,Miami,/boxscores/202210230mia.htm,Dolphins,,outdoors,grass ,3:00,"66,224",Miami Dolphins -7.5,44.5 (under),78 degrees, relative humidity 63%, wind 10 mph
+2022,7,Chicago Bears,New England Patriots,2022-10-24,8:15PM,New England,/boxscores/202210240nwe.htm,Bears (deferred),,outdoors,fieldturf ,2:55,"65,878",New England Patriots -8.5,40.5 (over),56 degrees, relative humidity 100%, wind 4 mph

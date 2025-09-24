@@ -1,0 +1,16 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2020,4,Denver Broncos,New York Jets,2020-10-01,8:20PM,New York,/boxscores/202010010nyj.htm,Broncos (deferred),,outdoors,fieldturf ,3:29,,New York Jets -1.0,41.0 (over),64 degrees, relative humidity 55%, wind 6 mph
+2020,4,Carolina Panthers,Arizona Cardinals,2020-10-04,1:00PM,Carolina,/boxscores/202010040car.htm,Panthers (deferred),,outdoors,grass,3:02,"5,120",Arizona Cardinals -3.0,52.5 (under),68 degrees, relative humidity 48%, wind 8 mph
+2020,4,Indianapolis Colts,Chicago Bears,2020-10-04,1:00PM,Chicago,/boxscores/202010040chi.htm,Colts (deferred),,outdoors,grass,3:09,,Indianapolis Colts -3.5,43.5 (under),52 degrees, relative humidity 54%, wind 10 mph
+2020,4,Cincinnati Bengals,Jacksonville Jaguars,2020-10-04,1:00PM,Cincinnati,/boxscores/202010040cin.htm,Jaguars,,outdoors,grass,3:10,"6,243",Cincinnati Bengals -1.0,50.0 (over),64 degrees, relative humidity 58%, wind 6 mph
+2020,4,Cleveland Browns,Dallas Cowboys,2020-10-04,1:00PM,Dallas,/boxscores/202010040dal.htm,Browns (deferred),,retractable roof (closed),fieldturf,3:20,"25,021",Dallas Cowboys -3.5,56.5 (over),,,
+2020,4,New Orleans Saints,Detroit Lions,2020-10-04,1:00PM,Detroit,/boxscores/202010040det.htm,Saints (deferred),,dome,fieldturf,3:06,,New Orleans Saints -3.0,51.5 (over),,,
+2020,4,Minnesota Vikings,Houston Texans,2020-10-04,1:00PM,Houston,/boxscores/202010040htx.htm,Vikings (deferred),,retractable roof (closed),grass,3:00,"12,102",Houston Texans -3.5,52.5 (over),,,
+2020,4,Seattle Seahawks,Miami Dolphins,2020-10-04,1:00PM,Miami,/boxscores/202010040mia.htm,Seahawks (deferred),,outdoors,grass,3:05,"12,369",Seattle Seahawks -4.5,55.0 (under),86 degrees, relative humidity 71%, wind 13 mph
+2020,4,Baltimore Ravens,Washington Football Team,2020-10-04,1:00PM,Washington Football,/boxscores/202010040was.htm,Ravens (deferred),,outdoors,grass,2:50,,Baltimore Ravens -14.5,45.0 (over),65 degrees, relative humidity 45%, wind 5 mph
+2020,4,Tampa Bay Buccaneers,Los Angeles Chargers,2020-10-04,1:00PM,Tampa Bay,/boxscores/202010040tam.htm,Chargers (deferred),,outdoors,grass,3:09,"6,383",Tampa Bay Buccaneers -7.5,42.5 (over),75 degrees, relative humidity 87%, wind 6 mph
+2020,4,Los Angeles Rams,New York Giants,2020-10-04,4:05PM,Los Angeles,/boxscores/202010040ram.htm,Rams (deferred),,dome,matrixturf,2:43,,Los Angeles Rams -13.5,50.0 (under),,,
+2020,4,Buffalo Bills,Las Vegas Raiders,2020-10-04,4:25PM,Las Vegas,/boxscores/202010040rai.htm,Raiders (deferred),,dome,grass,3:12,,Buffalo Bills -3.0,53.0 (push),,,
+2020,4,Philadelphia Eagles,San Francisco 49ers,2020-10-04,8:20PM,San Francisco,/boxscores/202010040sfo.htm,49ers (deferred),,outdoors,grass,3:09,,San Francisco 49ers -8.5,45.5 (under),84 degrees, relative humidity 30%, wind 12 mph
+2020,4,Kansas City Chiefs,New England Patriots,2020-10-05,7:05PM,Kansas City,/boxscores/202010050kan.htm,Patriots (deferred),,outdoors,grass,2:42,"12,729",Kansas City Chiefs -11.0,48.5 (under),73 degrees, relative humidity 39%, wind 14 mph
+2020,4,Green Bay Packers,Atlanta Falcons,2020-10-05,8:15PM,Green Bay,/boxscores/202010050gnb.htm,Falcons,,outdoors,grass,2:56,,Green Bay Packers -5.0,56.5 (under),53 degrees, relative humidity 46%, wind 9 mph

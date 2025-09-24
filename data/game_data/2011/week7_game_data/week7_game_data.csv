@@ -1,0 +1,14 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2011,7,Denver Broncos,Miami Dolphins,2011-10-23,1:02PM,Miami,/boxscores/201110230mia.htm,Dolphins,Dolphins,outdoors,grass ,3:23,"63,800",Denver Broncos -1.0,41.5 (under),77 degrees, relative humidity 57%," wind 9 mph, wind chill 0"
+2011,7,Houston Texans,Tennessee Titans,2011-10-23,1:02PM,Tennessee,/boxscores/201110230oti.htm,Titans (deferred),,outdoors,grass ,2:46,"69,143",Tennessee Titans -2.5,44.0 (over),72 degrees, relative humidity 35%, no wind
+2011,7,New York Jets,San Diego Chargers,2011-10-23,1:03PM,New York,/boxscores/201110230nyj.htm,Chargers (deferred),,outdoors,fieldturf,3:12,"79,088",San Diego Chargers -1.0,43.5 (over),58 degrees, relative humidity 46%," no wind, wind chill 0"
+2011,7,Cleveland Browns,Seattle Seahawks,2011-10-23,1:05PM,Cleveland,/boxscores/201110230cle.htm,Seahawks,,outdoors,grass ,3:08,"66,350",Cleveland Browns -3.0,41.0 (under),56 degrees, relative humidity 53%," wind 7 mph, wind chill 0"
+2011,7,Atlanta Falcons,Detroit Lions,2011-10-23,1:05PM,Detroit,/boxscores/201110230det.htm,Lions,,dome,fieldturf ,3:20,"63,625",Detroit Lions -4.5,47.0 (under),,,
+2011,7,Carolina Panthers,Washington Redskins,2011-10-23,1:05PM,Carolina,/boxscores/201110230car.htm,Panthers,,outdoors,grass ,3:19,"73,245",Carolina Panthers -2.5,44.5 (over),62 degrees, relative humidity 56%," no wind, wind chill 0"
+2011,7,Chicago Bears,Tampa Bay Buccaneers,2011-10-23,1:05PM,Tampa Bay,/boxscores/201110230tam.htm,Bears,,outdoors,grass ,3:12,"76,981",Chicago Bears -2.0,44.0 (under),62 degrees, relative humidity 54%," wind 15 mph, wind chill 0"
+2011,7,Pittsburgh Steelers,Arizona Cardinals,2011-10-23,4:05PM,Arizona,/boxscores/201110230crd.htm,Cardinals,,retractable roof (closed),grass ,3:09,"62,475",Pittsburgh Steelers -4.5,46.5 (over),,,
+2011,7,Dallas Cowboys,St. Louis Rams,2011-10-23,4:15PM,Dallas,/boxscores/201110230dal.htm,Rams,,retractable roof (closed),matrixturf,3:04,"80,086",Dallas Cowboys -14.0,43.0 (under),,,
+2011,7,Green Bay Packers,Minnesota Vikings,2011-10-23,4:15PM,Minnesota,/boxscores/201110230min.htm,Packers (deferred),,dome,sportturf,3:05,"63,946",Green Bay Packers -11.0,47.0 (over),,,
+2011,7,Kansas City Chiefs,Oakland Raiders,2011-10-23,7:05PM,Oakland,/boxscores/201110230rai.htm,Raiders (deferred),,outdoors,grass ,3:11,"57,361",Oakland Raiders -3.5,41.5 (under),79 degrees, relative humidity 46%," wind 6 mph, wind chill 0"
+2011,7,New Orleans Saints,Indianapolis Colts,2011-10-23,8:30PM,New Orleans,/boxscores/201110230nor.htm,Colts,,dome,sportturf,2:48,"73,012",New Orleans Saints -14.0,49.0 (over),,,
+2011,7,Jacksonville Jaguars,Baltimore Ravens,2011-10-24,8:40PM,Jacksonville,/boxscores/201110240jax.htm,Jaguars (deferred),,outdoors,grass ,3:21,"62,976",Baltimore Ravens -10.5,39.0 (under),60 degrees, relative humidity 77%," no wind, wind chill 0"

@@ -1,0 +1,17 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2024,3,New York Jets,New England Patriots,2024-09-19,8:15PM,New York,/boxscores/202409190nyj.htm,Patriots (deferred),,outdoors,fieldturf,2:57,"80,812",New York Jets -6.0,38.5 (under),75 degrees, relative humidity 63%, wind 5 mph
+2024,3,Indianapolis Colts,Chicago Bears,2024-09-22,1:00PM,Indianapolis,/boxscores/202409220clt.htm,Colts (deferred),,retractable roof (closed),fieldturf,3:16,"66,624",Indianapolis Colts -1.0,43.5 (under),,,
+2024,3,New York Giants,Cleveland Browns,2024-09-22,1:00PM,Cleveland,/boxscores/202409220cle.htm,Browns (deferred),,outdoors,grass,3:06,"68,016",Cleveland Browns -6.5,38.5 (under),76 degrees, relative humidity 62%, wind 4 mph
+2024,3,Denver Broncos,Tampa Bay Buccaneers,2024-09-22,1:00PM,Tampa Bay,/boxscores/202409220tam.htm,Broncos,,outdoors,grass,2:46,"62,738",Tampa Bay Buccaneers -6.0,41.0 (under),85 degrees, relative humidity 61%, wind 6 mph
+2024,3,Green Bay Packers,Tennessee Titans,2024-09-22,1:00PM,Tennessee,/boxscores/202409220oti.htm,Titans (deferred),,outdoors,grass,2:53,"67,322",Tennessee Titans -3.0,37.5 (over),87 degrees, relative humidity 59%, wind 7 mph
+2024,3,Minnesota Vikings,Houston Texans,2024-09-22,1:00PM,Minnesota,/boxscores/202409220min.htm,Vikings (deferred),,dome,sportturf,3:05,"66,843",Houston Texans -1.0,46.5 (under),,,
+2024,3,Philadelphia Eagles,New Orleans Saints,2024-09-22,1:00PM,New Orleans,/boxscores/202409220nor.htm,Eagles (deferred),,dome,sportturf,3:03,"70,006",New Orleans Saints -2.5,49.5 (under),,,
+2024,3,Pittsburgh Steelers,Los Angeles Chargers,2024-09-22,1:00PM,Pittsburgh,/boxscores/202409220pit.htm,Steelers (deferred),,outdoors,grass,2:41,"66,734",Pittsburgh Steelers -1.0,34.5 (under),72 degrees, relative humidity 73%, wind 2 mph
+2024,3,Carolina Panthers,Las Vegas Raiders,2024-09-22,4:05PM,Las Vegas,/boxscores/202409220rai.htm,Raiders (deferred),,dome,grass,3:13,"62,417",Las Vegas Raiders -5.5,40.0 (over),,,
+2024,3,Seattle Seahawks,Miami Dolphins,2024-09-22,4:05PM,Seattle,/boxscores/202409220sea.htm,Dolphins (deferred),,outdoors,fieldturf,3:07,"68,658",Seattle Seahawks -4.5,41.5 (under),64 degrees, relative humidity 66%, wind 2 mph
+2024,3,Detroit Lions,Arizona Cardinals,2024-09-22,4:25PM,Arizona,/boxscores/202409220crd.htm,Cardinals (deferred),,retractable roof (closed),grass,3:00,"63,650",Detroit Lions -2.5,51.5 (under),,,
+2024,3,Baltimore Ravens,Dallas Cowboys,2024-09-22,4:25PM,Dallas,/boxscores/202409220dal.htm,Cowboys,,retractable roof (closed),matrixturf,3:14,"93,566",Baltimore Ravens -1.0,48.0 (over),,,
+2024,3,Los Angeles Rams,San Francisco 49ers,2024-09-22,4:25PM,Los Angeles,/boxscores/202409220ram.htm,Rams (deferred),,dome,matrixturf,3:06,,San Francisco 49ers -6.5,43.5 (over),,,
+2024,3,Kansas City Chiefs,Atlanta Falcons,2024-09-22,8:20PM,Atlanta,/boxscores/202409220atl.htm,Chiefs (deferred),,retractable roof (open),fieldturf,2:58,"72,441",Kansas City Chiefs -3.0,46.5 (under),,,
+2024,3,Buffalo Bills,Jacksonville Jaguars,2024-09-23,7:30PM,Buffalo,/boxscores/202409230buf.htm,Jaguars (deferred),,outdoors,a_turf,3:04,"70,316",Buffalo Bills -5.5,45.5 (over),68 degrees, relative humidity 87%, wind 5 mph
+2024,3,Washington Commanders,Cincinnati Bengals,2024-09-23,8:15PM,Cincinnati,/boxscores/202409230cin.htm,Commanders (deferred),,outdoors,fieldturf,2:47,"66,207",Cincinnati Bengals -7.5,46.5 (over),69 degrees, relative humidity 67%, wind 5 mph

@@ -1,0 +1,65 @@
+name,team,year,week,position,xpa,xpm,fga,fgm,fg_distances,fpoints
+Ryan Longwell,MIN,2010,1,K,1,0,1,1,['41'],3.1
+Garrett Hartley,NOR,2010,1,K,2,2,2,0,0,0.0
+Matt Bryant,ATL,2010,1,K,0,0,4,3,"['49', '39', '23']",10.8
+Jeff Reed,PIT,2010,1,K,0,0,5,3,"['52', '36', '34']",10.2
+Dan Carpenter,MIA,2010,1,K,1,1,3,2,"['32', '43']",7.5
+Rian Lindell,BUF,2010,1,K,1,1,2,1,['51'],5.1
+Jason Hanson,DET,2010,1,K,2,2,0,0,0,2.0
+Robbie Gould,CHI,2010,1,K,1,1,2,2,"['20', '31']",7.1
+Mike Nugent,CIN,2010,1,K,3,3,1,1,['54'],8.4
+Stephen Gostkowski,NWE,2010,1,K,5,5,3,1,['32'],6.199999999999999
+Phil Dawson,CLE,2010,1,K,2,2,1,0,0,1.0
+Connor Barth,TAM,2010,1,K,2,2,1,1,['49'],6.9
+Adam Vinatieri,IND,2010,1,K,3,3,1,1,['20'],6.0
+Neil Rackers,HOU,2010,1,K,4,4,2,2,"['30', '49']",11.9
+Sebastian Janikowski,OAK,2010,1,K,1,1,3,2,"['34', '30']",6.4
+Rob Bironas,TEN,2010,1,K,5,5,1,1,['43'],9.3
+Matt Prater,DEN,2010,1,K,2,2,1,1,['54'],7.4
+Josh Scobee,JAX,2010,1,K,3,3,1,1,['45'],7.5
+John Kasay,CAR,2010,1,K,1,1,3,3,"['21', '52', '43']",13.5
+Lawrence Tynes,NYG,2010,1,K,4,4,1,1,['32'],7.2
+Jay Feely,ARI,2010,1,K,2,2,1,1,['22'],5.0
+Josh Brown,STL,2010,1,K,1,1,3,2,"['46', '25']",7.6
+Mason Crosby,GNB,2010,1,K,3,3,2,2,"['49', '56']",13.5
+David Akers,PHI,2010,1,K,2,2,2,2,"['45', '24']",9.5
+Joe Nedney,SFO,2010,1,K,0,0,2,2,"['23', '23']",6.0
+Olindo Mare,SEA,2010,1,K,4,4,1,1,['35'],7.5
+David Buehler,DAL,2010,1,K,1,1,1,0,0,0.0
+Graham Gano,WAS,2010,1,K,1,1,2,2,"['29', '49']",8.9
+Billy Cundiff,BAL,2010,1,K,1,1,1,1,['25'],4.0
+Nick Folk,NYJ,2010,1,K,0,0,3,3,"['23', '28', '48']",10.8
+Nate Kaeding,SDG,2010,1,K,2,2,0,0,0,2.0
+Ryan Succop,KAN,2010,1,K,3,3,0,0,0,3.0
+Connor Barth,TAM,2010,17,K,2,2,3,3,"['43', '32', '48']",14.3
+Garrett Hartley,NOR,2010,17,K,1,1,2,2,"['45', '38']",9.3
+Clint Stitser,CIN,2010,17,K,1,1,1,0,0,0.0
+Billy Cundiff,BAL,2010,17,K,1,1,2,2,"['25', '47']",8.7
+Shaun Suisham,PIT,2010,17,K,5,5,2,2,"['41', '24']",12.1
+Phil Dawson,CLE,2010,17,K,0,0,1,1,['19'],3.0
+Sebastian Janikowski,OAK,2010,17,K,4,4,1,1,['38'],7.8
+Ryan Succop,KAN,2010,17,K,1,1,1,1,['30'],4.0
+Dan Carpenter,MIA,2010,17,K,1,1,1,0,0,0.0
+Shayne Graham,NWE,2010,17,K,5,5,1,1,['28'],8.0
+John Kasay,CAR,2010,17,K,1,1,1,1,['23'],4.0
+Matt Bryant,ATL,2010,17,K,4,4,1,1,['47'],8.7
+Rian Lindell,BUF,2010,17,K,1,1,0,0,0,1.0
+Nick Folk,NYJ,2010,17,K,5,5,1,1,['28'],8.0
+Ryan Longwell,MIN,2010,17,K,1,1,2,2,"['27', '48']",8.8
+Dave Rayner,DET,2010,17,K,2,2,2,2,"['55', '37']",11.2
+Robbie Gould,CHI,2010,17,K,0,0,1,1,['30'],3.0
+Mason Crosby,GNB,2010,17,K,1,1,1,1,['23'],4.0
+Jay Feely,ARI,2010,17,K,1,1,0,0,0,1.0
+Jeff Reed,SFO,2010,17,K,5,5,1,1,['39'],8.9
+David Buehler,DAL,2010,17,K,2,2,1,0,0,1.0
+David Akers,PHI,2010,17,K,1,1,2,2,"['43', '22']",8.3
+Nate Kaeding,SDG,2010,17,K,3,3,5,4,"['42', '45', '47', '37']",19.1
+Stephen Hauschka,DEN,2010,17,K,4,4,0,0,0,4.0
+Josh Scobee,JAX,2010,17,K,2,2,2,1,['39'],4.9
+Neil Rackers,HOU,2010,17,K,4,4,2,2,"['26', '33']",10.3
+Rob Bironas,TEN,2010,17,K,2,2,3,2,"['26', '42']",8.2
+Adam Vinatieri,IND,2010,17,K,2,2,3,3,"['48', '44', '43']",15.5
+Lawrence Tynes,NYG,2010,17,K,2,2,2,1,['20'],4.0
+Graham Gano,WAS,2010,17,K,2,2,1,0,0,1.0
+Josh Brown,STL,2010,17,K,0,0,2,2,"['32', '27']",6.2
+Olindo Mare,SEA,2010,17,K,1,1,3,3,"['31', '38', '34']",11.3

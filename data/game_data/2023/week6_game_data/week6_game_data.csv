@@ -1,0 +1,16 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2023,6,Kansas City Chiefs,Denver Broncos,2023-10-12,8:15PM,Kansas City,/boxscores/202310120kan.htm,Chiefs (deferred),,outdoors,grass,2:50,"73,528",Kansas City Chiefs -10.5,47.5 (under),,,
+2023,6,Baltimore Ravens,Tennessee Titans,2023-10-15,9:30AM,Tennessee,/boxscores/202310150oti.htm,Titans (deferred),,outdoors,grass,3:09,"61,011",Baltimore Ravens -5.0,42.5 (under),52 degrees, relative humidity 44%, wind 8 mph
+2023,6,Cleveland Browns,San Francisco 49ers,2023-10-15,1:00PM,Cleveland,/boxscores/202310150cle.htm,Browns (deferred),,outdoors,grass,3:29,"67,431",San Francisco 49ers -9.5,35.5 (over),53 degrees, relative humidity 70%, wind 15 mph
+2023,6,Washington Commanders,Atlanta Falcons,2023-10-15,1:00PM,Atlanta,/boxscores/202310150atl.htm,Falcons (deferred),,retractable roof (closed),fieldturf,2:52,"69,921",Atlanta Falcons -1.5,41.5 (under),,,
+2023,6,Miami Dolphins,Carolina Panthers,2023-10-15,1:00PM,Miami,/boxscores/202310150mia.htm,Dolphins (deferred),,outdoors,grass,3:01,"65,529",Miami Dolphins -14.0,47.5 (over),87 degrees, relative humidity 56%, wind 12 mph
+2023,6,Minnesota Vikings,Chicago Bears,2023-10-15,1:00PM,Chicago,/boxscores/202310150chi.htm,Vikings (deferred),,outdoors,grass,2:55,"62,167",Minnesota Vikings -3.0,44.5 (under),53 degrees, relative humidity 74%, wind 16 mph
+2023,6,Cincinnati Bengals,Seattle Seahawks,2023-10-15,1:00PM,Cincinnati,/boxscores/202310150cin.htm,Bengals (deferred),,outdoors,fieldturf,2:51,"66,385",Cincinnati Bengals -3.0,45.5 (under),57 degrees, relative humidity 59%, wind 15 mph
+2023,6,Jacksonville Jaguars,Indianapolis Colts,2023-10-15,1:00PM,Jacksonville,/boxscores/202310150jax.htm,Colts,,outdoors,grass,2:58,"64,851",Jacksonville Jaguars -4.5,43.5 (over),,,
+2023,6,Houston Texans,New Orleans Saints,2023-10-15,1:00PM,Houston,/boxscores/202310150htx.htm,Saints (deferred),,retractable roof (closed),astroturf,3:05,"71,810",New Orleans Saints -2.5,41.5 (under),,,
+2023,6,Las Vegas Raiders,New England Patriots,2023-10-15,4:05PM,Las Vegas,/boxscores/202310150rai.htm,Patriots (deferred),,dome,grass,3:02,"61,985",Las Vegas Raiders -2.5,42.5 (under),,,
+2023,6,Los Angeles Rams,Arizona Cardinals,2023-10-15,4:25PM,Los Angeles,/boxscores/202310150ram.htm,Rams (deferred),,dome,matrixturf,3:01,"71,202",Los Angeles Rams -7.0,47.5 (under),,,
+2023,6,Detroit Lions,Tampa Bay Buccaneers,2023-10-15,4:25PM,Tampa Bay,/boxscores/202310150tam.htm,Lions (deferred),,outdoors,grass,2:51,"65,854",Detroit Lions -3.0,43.5 (under),77 degrees, relative humidity 55%, wind 13 mph
+2023,6,New York Jets,Philadelphia Eagles,2023-10-15,4:25PM,New York,/boxscores/202310150nyj.htm,Eagles (deferred),,outdoors,fieldturf,3:11,"83,068",Philadelphia Eagles -6.5,43.5 (under),59 degrees, relative humidity 54%, wind 11 mph
+2023,6,Buffalo Bills,New York Giants,2023-10-15,8:20PM,Buffalo,/boxscores/202310150buf.htm,Giants (deferred),,outdoors,a_turf,3:14,"70,515",Buffalo Bills -15.5,43.5 (under),46 degrees, relative humidity 90%, wind 7 mph
+2023,6,Dallas Cowboys,Los Angeles Chargers,2023-10-16,8:15PM,Los Angeles,/boxscores/202310160sdg.htm,Chargers (deferred),,dome,matrixturf,3:08,"70,240",Dallas Cowboys -1.5,50.0 (under),,,

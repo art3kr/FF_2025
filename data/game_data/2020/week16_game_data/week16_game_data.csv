@@ -1,0 +1,17 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2020,16,New Orleans Saints,Minnesota Vikings,2020-12-25,4:30PM,New Orleans,/boxscores/202012250nor.htm,Vikings (deferred),,dome,astroturf,3:11,"3,000",New Orleans Saints -6.5,48.5 (over),,,
+2020,16,Tampa Bay Buccaneers,Detroit Lions,2020-12-26,1:00PM,Detroit,/boxscores/202012260det.htm,Buccaneers,,dome,fieldturf,3:02,,Tampa Bay Buccaneers -9.5,54.0 (push),,,
+2020,16,San Francisco 49ers,Arizona Cardinals,2020-12-26,4:30PM,Arizona,/boxscores/202012260crd.htm,49ers (deferred),,retractable roof (closed),grass,2:58,,Arizona Cardinals -5.0,48.5 (under),,,
+2020,16,Miami Dolphins,Las Vegas Raiders,2020-12-26,8:15PM,Las Vegas,/boxscores/202012260rai.htm,Dolphins (deferred),,dome,grass,3:05,,Miami Dolphins -3.0,48.0 (over),,,
+2020,16,Kansas City Chiefs,Atlanta Falcons,2020-12-27,1:00PM,Kansas City,/boxscores/202012270kan.htm,Chiefs (deferred),,outdoors,grass,2:53,"13,470",Kansas City Chiefs -11.0,54.0 (under),49 degrees, relative humidity 44%, wind 8 mph
+2020,16,Chicago Bears,Jacksonville Jaguars,2020-12-27,1:00PM,Jacksonville,/boxscores/202012270jax.htm,Bears (deferred),,outdoors,grass,2:57,"17,445",Chicago Bears -9.5,47.0 (over),55 degrees, relative humidity 60%, wind 5 mph
+2020,16,Cincinnati Bengals,Houston Texans,2020-12-27,1:00PM,Houston,/boxscores/202012270htx.htm,Bengals (deferred),,retractable roof (closed),grass,3:04,"12,344",Houston Texans -7.5,46.0 (over),,,
+2020,16,New York Jets,Cleveland Browns,2020-12-27,1:00PM,New York,/boxscores/202012270nyj.htm,Jets (deferred),,outdoors,fieldturf ,3:17,,Cleveland Browns -6.5,45.0 (under),37 degrees, relative humidity 42%, wind 5 mph
+2020,16,Pittsburgh Steelers,Indianapolis Colts,2020-12-27,1:00PM,Pittsburgh,/boxscores/202012270pit.htm,Colts (deferred),,outdoors,grass,3:10,,Indianapolis Colts -1.0,43.5 (over),37 degrees, relative humidity 65%, wind 6 mph
+2020,16,Baltimore Ravens,New York Giants,2020-12-27,1:00PM,Baltimore,/boxscores/202012270rav.htm,Giants (deferred),,outdoors,grass,3:04,,Baltimore Ravens -10.0,43.0 (under),38 degrees, relative humidity 48%, wind 3 mph
+2020,16,Carolina Panthers,Washington Football Team,2020-12-27,4:05PM,Washington Football,/boxscores/202012270was.htm,Panthers (deferred),,outdoors,grass,3:01,,Carolina Panthers -1.0,41.5 (under),41 degrees, relative humidity 46%, wind 6 mph
+2020,16,Los Angeles Chargers,Denver Broncos,2020-12-27,4:05PM,Los Angeles,/boxscores/202012270sdg.htm,Broncos (deferred),,dome,matrixturf,3:00,,Los Angeles Chargers -2.5,47.5 (under),,,
+2020,16,Dallas Cowboys,Philadelphia Eagles,2020-12-27,4:25PM,Dallas,/boxscores/202012270dal.htm,Cowboys (deferred),,retractable roof (closed),fieldturf,3:17,"30,131",Philadelphia Eagles -3.0,50.0 (over),,,
+2020,16,Seattle Seahawks,Los Angeles Rams,2020-12-27,4:25PM,Seattle,/boxscores/202012270sea.htm,Seahawks (deferred),,outdoors,fieldturf,3:09,,Seattle Seahawks -1.5,47.5 (under),45 degrees, relative humidity 89%, wind 2 mph
+2020,16,Green Bay Packers,Tennessee Titans,2020-12-27,8:20PM,Green Bay,/boxscores/202012270gnb.htm,Titans (deferred),,outdoors,grass,2:46,,Green Bay Packers -3.0,52.5 (over),28 degrees, relative humidity 88%, wind 15 mph
+2020,16,Buffalo Bills,New England Patriots,2020-12-28,8:15PM,New England,/boxscores/202012280nwe.htm,Bills (deferred),,outdoors,fieldturf,2:51,,Buffalo Bills -7.0,47.5 (under),41 degrees, relative humidity 90%, wind 4 mph

@@ -1,0 +1,15 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2022,11,Tennessee Titans,Green Bay Packers,2022-11-17,8:15PM,Green Bay,/boxscores/202211170gnb.htm,Titans,,outdoors,grass ,3:02,"77,506",Green Bay Packers -3.0,41.0 (over),25 degrees, relative humidity 81%, wind 11 mph
+2022,11,Buffalo Bills,Cleveland Browns,2022-11-20,1:00PM,Buffalo,/boxscores/202211200buf.htm,Bills (deferred),,dome,fieldturf ,3:15,"52,146",Buffalo Bills -7.5,50.0 (over),,,
+2022,11,Detroit Lions,New York Giants,2022-11-20,1:00PM,New York,/boxscores/202211200nyg.htm,Lions (deferred),,outdoors,fieldturf ,3:06,"76,267",New York Giants -3.0,44.5 (over),35 degrees, relative humidity 30%, wind 21 mph
+2022,11,Washington Commanders,Houston Texans,2022-11-20,1:00PM,Houston,/boxscores/202211200htx.htm,Texans (deferred),,retractable roof (closed),astroturf,2:54,"65,865",Washington Commanders -3.0,41.0 (under),,,
+2022,11,New England Patriots,New York Jets,2022-11-20,1:00PM,New England,/boxscores/202211200nwe.htm,Jets (deferred),,outdoors,fieldturf ,2:59,"65,878",New England Patriots -3.5,38.0 (under),42 degrees, relative humidity 35%, wind 2 mph
+2022,11,Atlanta Falcons,Chicago Bears,2022-11-20,1:00PM,Atlanta,/boxscores/202211200atl.htm,Bears (deferred),,retractable roof (closed),fieldturf,2:57,"69,757",Atlanta Falcons -2.5,49.0 (over),,,
+2022,11,Baltimore Ravens,Carolina Panthers,2022-11-20,1:00PM,Baltimore,/boxscores/202211200rav.htm,Ravens,,outdoors,grass,3:12,"70,677",Baltimore Ravens -13.0,41.5 (under),36 degrees, relative humidity 24%, wind 2 mph
+2022,11,Philadelphia Eagles,Indianapolis Colts,2022-11-20,1:00PM,Indianapolis,/boxscores/202211200clt.htm,Eagles (deferred),,retractable roof (closed),fieldturf ,2:56,"66,241",Philadelphia Eagles -6.5,45.5 (under),,,
+2022,11,New Orleans Saints,Los Angeles Rams,2022-11-20,1:00PM,New Orleans,/boxscores/202211200nor.htm,Saints (deferred),,dome,sportturf,2:55,"70,025",New Orleans Saints -2.5,39.0 (over),,,
+2022,11,Las Vegas Raiders,Denver Broncos,2022-11-20,4:05PM,Denver,/boxscores/202211200den.htm,Broncos (deferred),Raiders,outdoors,grass ,3:11,"76,056",Denver Broncos -2.5,41.0 (under),49 degrees, relative humidity 23%, wind 11 mph
+2022,11,Cincinnati Bengals,Pittsburgh Steelers,2022-11-20,4:25PM,Pittsburgh,/boxscores/202211200pit.htm,Steelers (deferred),,outdoors,grass ,3:18,"66,401",Cincinnati Bengals -3.5,40.0 (over),27 degrees, relative humidity 38%, wind 12 mph
+2022,11,Dallas Cowboys,Minnesota Vikings,2022-11-20,4:25PM,Minnesota,/boxscores/202211200min.htm,Vikings,,dome,sportturf,3:03,"65,304",Dallas Cowboys -1.5,48.5 (under),,,
+2022,11,Kansas City Chiefs,Los Angeles Chargers,2022-11-20,8:20PM,Los Angeles,/boxscores/202211200sdg.htm,Chargers (deferred),,dome,matrixturf,2:58,"70,240",Kansas City Chiefs -5.0,52.5 (over),,,
+2022,11,San Francisco 49ers,Arizona Cardinals,2022-11-21,8:15PM,Arizona,/boxscores/202211210crd.htm,49ers (deferred),,outdoors,grass,2:59,"78,427",San Francisco 49ers -8.0,43.0 (over),64 degrees, relative humidity 52%, wind 4 mph

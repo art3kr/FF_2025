@@ -1,0 +1,16 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2022,8,Baltimore Ravens,Tampa Bay Buccaneers,2022-10-27,8:15PM,Tampa Bay,/boxscores/202210270tam.htm,Buccaneers (deferred),,outdoors,grass ,3:08,"68,912",Tampa Bay Buccaneers -1.5,45.5 (over),79 degrees, relative humidity 74%, wind 4 mph
+2022,8,Denver Broncos,Jacksonville Jaguars,2022-10-30,9:30AM,Jacksonville,/boxscores/202210300jax.htm,Jaguars (deferred),,outdoors,grass ,2:58,"86,215",Jacksonville Jaguars -2.0,40.5 (under),61 degrees, relative humidity 77%, wind 11 mph
+2022,8,Miami Dolphins,Detroit Lions,2022-10-30,1:00PM,Detroit,/boxscores/202210300det.htm,Dolphins (deferred),,dome,fieldturf ,2:50,"61,447",Miami Dolphins -3.5,51.5 (over),,,
+2022,8,Philadelphia Eagles,Pittsburgh Steelers,2022-10-30,1:00PM,Philadelphia,/boxscores/202210300phi.htm,Eagles (deferred),,outdoors,grass ,2:54,"69,879",Philadelphia Eagles -10.5,43.0 (over),61 degrees, relative humidity 47%, wind 2 mph
+2022,8,Atlanta Falcons,Carolina Panthers,2022-10-30,1:00PM,Atlanta,/boxscores/202210300atl.htm,Panthers (deferred),Falcons,retractable roof (closed),fieldturf,3:39,"68,996",Atlanta Falcons -4.0,41.0 (over),,,
+2022,8,Dallas Cowboys,Chicago Bears,2022-10-30,1:00PM,Dallas,/boxscores/202210300dal.htm,Bears (deferred),,retractable roof (open),matrixturf,3:07,"93,767",Dallas Cowboys -10.0,42.5 (over),,,
+2022,8,Minnesota Vikings,Arizona Cardinals,2022-10-30,1:00PM,Minnesota,/boxscores/202210300min.htm,Cardinals (deferred),,dome,sportturf,3:26,"66,742",Minnesota Vikings -3.5,48.5 (over),,,
+2022,8,New Orleans Saints,Las Vegas Raiders,2022-10-30,1:00PM,New Orleans,/boxscores/202210300nor.htm,Saints (deferred),,dome,sportturf,2:46,"70,009",Las Vegas Raiders -1.5,49.5 (under),,,
+2022,8,New England Patriots,New York Jets,2022-10-30,1:00PM,New York,/boxscores/202210300nyj.htm,Patriots (deferred),,outdoors,fieldturf ,3:01,"82,823",New England Patriots -2.5,40.0 (under),59 degrees, relative humidity 45%, wind 1 mph
+2022,8,Tennessee Titans,Houston Texans,2022-10-30,4:05PM,Houston,/boxscores/202210300htx.htm,Texans (deferred),,retractable roof (closed),astroturf,2:51,"68,467",Tennessee Titans -3.5,39.0 (under),,,
+2022,8,San Francisco 49ers,Los Angeles Rams,2022-10-30,4:25PM,Los Angeles,/boxscores/202210300ram.htm,49ers (deferred),,dome,matrixturf,2:45,"73,505",Los Angeles Rams -2.5,42.0 (over),,,
+2022,8,Washington Commanders,Indianapolis Colts,2022-10-30,4:25PM,Indianapolis,/boxscores/202210300clt.htm,Commanders (deferred),,retractable roof (closed),fieldturf ,2:50,"65,515",Indianapolis Colts -3.0,39.5 (under),,,
+2022,8,Seattle Seahawks,New York Giants,2022-10-30,4:25PM,Seattle,/boxscores/202210300sea.htm,Giants (deferred),,outdoors,fieldturf ,3:01,"68,921",Seattle Seahawks -3.0,44.5 (under),54 degrees, relative humidity 72%, wind 12 mph
+2022,8,Buffalo Bills,Green Bay Packers,2022-10-30,8:20PM,Buffalo,/boxscores/202210300buf.htm,Packers (deferred),,outdoors,a_turf,3:04,"70,863",Buffalo Bills -10.5,47.0 (under),50 degrees, relative humidity 57%, wind 4 mph
+2022,8,Cleveland Browns,Cincinnati Bengals,2022-10-31,8:15PM,Cleveland,/boxscores/202210310cle.htm,Browns (deferred),,outdoors,grass ,2:52,"67,431",Cincinnati Bengals -3.0,45.0 (push),66 degrees, relative humidity 69%, wind 9 mph

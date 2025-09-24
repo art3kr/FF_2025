@@ -1,0 +1,17 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2024,18,Baltimore Ravens,Cleveland Browns,2025-01-04,4:30PM,Baltimore,/boxscores/202501040rav.htm,Ravens (deferred),,outdoors,grass,3:09,"70,562",Baltimore Ravens -20.0,41.5 (over),31 degrees, relative humidity 35%, wind 16 mph
+2024,18,Cincinnati Bengals,Pittsburgh Steelers,2025-01-04,8:00PM,Pittsburgh,/boxscores/202501040pit.htm,Steelers (deferred),,outdoors,grass,3:01,"65,631",Cincinnati Bengals -2.5,47.5 (under),19 degrees, relative humidity 73%, wind 10 mph
+2024,18,Carolina Panthers,Atlanta Falcons,2025-01-05,1:00PM,Atlanta,/boxscores/202501050atl.htm,Panthers (deferred),Panthers,retractable roof (closed),fieldturf,3:21,"69,581",Atlanta Falcons -9.0,48.0 (over),,,
+2024,18,New England Patriots,Buffalo Bills,2025-01-05,1:00PM,New England,/boxscores/202501050nwe.htm,Bills (deferred),,outdoors,fieldturf,2:59,"64,626",Buffalo Bills -3.5,36.0 (over),33 degrees, relative humidity 50%, wind 14 mph
+2024,18,Chicago Bears,Green Bay Packers,2025-01-05,1:00PM,Green Bay,/boxscores/202501050gnb.htm,Packers,,outdoors,grass,3:03,"77,862",Green Bay Packers -10.0,41.5 (over),16 degrees, relative humidity 68%, wind 13 mph
+2024,18,Indianapolis Colts,Jacksonville Jaguars,2025-01-05,1:00PM,Indianapolis,/boxscores/202501050clt.htm,Colts,Colts,retractable roof (closed),fieldturf,3:13,"63,041",Indianapolis Colts -3.5,45.0 (over),,,
+2024,18,Washington Commanders,Dallas Cowboys,2025-01-05,1:00PM,Dallas,/boxscores/202501050dal.htm,Cowboys (deferred),,retractable roof (closed),matrixturf,3:06,"91,349",Washington Commanders -6.5,44.0 (under),,,
+2024,18,Houston Texans,Tennessee Titans,2025-01-05,1:00PM,Tennessee,/boxscores/202501050oti.htm,Texans,,outdoors,grass,2:55,"61,815",Tennessee Titans -1.5,36.5 (over),35 degrees, relative humidity 97%, wind 10 mph
+2024,18,Tampa Bay Buccaneers,New Orleans Saints,2025-01-05,1:00PM,Tampa Bay,/boxscores/202501050tam.htm,Saints,,outdoors,grass,3:12,"63,001",Tampa Bay Buccaneers -14.0,45.0 (over),68 degrees, relative humidity 34%, wind 6 mph
+2024,18,Philadelphia Eagles,New York Giants,2025-01-05,1:00PM,Philadelphia,/boxscores/202501050phi.htm,Eagles (deferred),,outdoors,grass,2:53,"69,879",Philadelphia Eagles -2.5,37.0 (under),31 degrees, relative humidity 37%, wind 19 mph
+2024,18,Arizona Cardinals,San Francisco 49ers,2025-01-05,4:25PM,Arizona,/boxscores/202501050crd.htm,Cardinals (deferred),,retractable roof (open),grass,3:13,"63,849",Arizona Cardinals -4.5,43.0 (over),,,
+2024,18,Denver Broncos,Kansas City Chiefs,2025-01-05,4:25PM,Denver,/boxscores/202501050den.htm,Chiefs (deferred),,outdoors,grass,2:39,,Denver Broncos -10.5,40.0 (under),28 degrees, relative humidity 69%, wind 5 mph
+2024,18,New York Jets,Miami Dolphins,2025-01-05,4:25PM,New York,/boxscores/202501050nyj.htm,Jets (deferred),,outdoors,fieldturf,3:12,"68,818",Pick,39.0 (over),34 degrees, relative humidity 47%, wind 10 mph
+2024,18,Los Angeles Chargers,Las Vegas Raiders,2025-01-05,4:25PM,Las Vegas,/boxscores/202501050rai.htm,Chargers (deferred),,dome,grass,2:54,"61,352",Los Angeles Chargers -6.5,42.0 (over),,,
+2024,18,Seattle Seahawks,Los Angeles Rams,2025-01-05,4:25PM,Los Angeles,/boxscores/202501050ram.htm,Seahawks (deferred),,dome,matrixturf,2:53,"72,610",Seattle Seahawks -7.5,38.5 (over),,,
+2024,18,Detroit Lions,Minnesota Vikings,2025-01-05,8:20PM,Detroit,/boxscores/202501050det.htm,Vikings (deferred),,dome,fieldturf,3:06,"64,774",Detroit Lions -2.5,56.0 (under),,,

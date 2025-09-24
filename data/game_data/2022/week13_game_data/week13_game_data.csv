@@ -1,0 +1,16 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2022,13,Buffalo Bills,New England Patriots,2022-12-01,8:15PM,New England,/boxscores/202212010nwe.htm,Bills (deferred),,outdoors,fieldturf ,2:55,"65,878",Buffalo Bills -3.5,43.5 (under),35 degrees, relative humidity 57%, wind 2 mph
+2022,13,Cleveland Browns,Houston Texans,2022-12-04,1:00PM,Houston,/boxscores/202212040htx.htm,Browns (deferred),,retractable roof (closed),astroturf,3:11,"66,523",Cleveland Browns -8.0,46.5 (under),,,
+2022,13,Baltimore Ravens,Denver Broncos,2022-12-04,1:00PM,Baltimore,/boxscores/202212040rav.htm,Ravens (deferred),,outdoors,grass,2:56,"70,443",Baltimore Ravens -9.5,39.5 (under),63 degrees, relative humidity 75%, wind 8 mph
+2022,13,Detroit Lions,Jacksonville Jaguars,2022-12-04,1:00PM,Detroit,/boxscores/202212040det.htm,Lions (deferred),,dome,fieldturf ,2:54,"60,743",Detroit Lions -1.0,51.0 (over),,,
+2022,13,Minnesota Vikings,New York Jets,2022-12-04,1:00PM,Minnesota,/boxscores/202212040min.htm,Vikings (deferred),,dome,sportturf,3:17,"66,973",Minnesota Vikings -3.0,44.5 (over),,,
+2022,13,Washington Commanders,New York Giants,2022-12-04,1:00PM,New York,/boxscores/202212040nyg.htm,Commanders (deferred),Giants,outdoors,fieldturf ,3:22,"76,128",Washington Commanders -2.0,40.5 (under),40 degrees, relative humidity 63%, wind 9 mph
+2022,13,Philadelphia Eagles,Tennessee Titans,2022-12-04,1:00PM,Philadelphia,/boxscores/202212040phi.htm,Titans (deferred),,outdoors,grass ,3:09,"69,879",Philadelphia Eagles -4.0,44.0 (over),60 degrees, relative humidity 62%, wind 7 mph
+2022,13,Pittsburgh Steelers,Atlanta Falcons,2022-12-04,1:00PM,Atlanta,/boxscores/202212040atl.htm,Falcons (deferred),,retractable roof (closed),fieldturf,2:52,"70,325",Atlanta Falcons -1.0,43.0 (under),,,
+2022,13,Green Bay Packers,Chicago Bears,2022-12-04,1:00PM,Chicago,/boxscores/202212040chi.htm,Bears,,outdoors,grass ,2:55,"61,233",Green Bay Packers -4.5,45.0 (over),38 degrees, relative humidity 42%, wind 12 mph
+2022,13,San Francisco 49ers,Miami Dolphins,2022-12-04,4:05PM,San Francisco,/boxscores/202212040sfo.htm,49ers (deferred),,outdoors,grass,3:14,"71,732",San Francisco 49ers -4.5,45.5 (over),38 degrees, relative humidity 73%, wind 6 mph
+2022,13,Seattle Seahawks,Los Angeles Rams,2022-12-04,4:05PM,Los Angeles,/boxscores/202212040ram.htm,Seahawks (deferred),,dome,matrixturf,3:03,"71,802",Seattle Seahawks -7.0,41.0 (over),,,
+2022,13,Cincinnati Bengals,Kansas City Chiefs,2022-12-04,4:25PM,Cincinnati,/boxscores/202212040cin.htm,Bengals,,outdoors,fieldturf ,2:56,"66,243",Kansas City Chiefs -2.5,53.0 (under),57 degrees, relative humidity 77%, wind 2 mph
+2022,13,Las Vegas Raiders,Los Angeles Chargers,2022-12-04,4:25PM,Las Vegas,/boxscores/202212040rai.htm,Chargers (deferred),,dome,grass,3:07,"62,123",Las Vegas Raiders -2.5,49.5 (under),,,
+2022,13,Dallas Cowboys,Indianapolis Colts,2022-12-04,8:20PM,Dallas,/boxscores/202212040dal.htm,Colts (deferred),,retractable roof (closed),matrixturf,3:07,"93,086",Dallas Cowboys -10.5,44.5 (over),,,
+2022,13,Tampa Bay Buccaneers,New Orleans Saints,2022-12-05,8:15PM,Tampa Bay,/boxscores/202212050tam.htm,Saints (deferred),,outdoors,grass ,2:57,"68,709",Tampa Bay Buccaneers -3.0,41.0 (under),69 degrees, relative humidity 78%, wind 2 mph
