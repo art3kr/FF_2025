@@ -10,7 +10,11 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # To DO:
-# Create directories
+# Get weather data predictions for upcoming games
+# Odds API for vegas line and over/under
+# Consider reorganizing where I put weekly weather predictions and odds data
+# Get punter data? 
+    # Historical
 
 game_info_SCHEMA = [
     'boxscore_url',
@@ -221,12 +225,12 @@ def combine_all_years_game_data():
 
     return final_df
 
-def get_weekly_weather_data(week):
+def get_weekly_weather_data(year,week):
     '''function to get weather predictions for games of a certain week
     input: week [int]
     output: pandas Dataframe'''
 
-    base_url = f'https://www.nflweather.com/week/2024/week-{week}'
+    base_url = f'https://www.nflweather.com/week/{year}/week-{week}'
 
     '''get html soup'''
     r = requests.get(base_url)
@@ -246,28 +250,28 @@ def get_weekly_weather_data(week):
     print(classes)
 
 if __name__ == "__main__":
-    year = 2024
-    week = 17
+    year = 2025
+    week = 4
 
     #step 0: create directories
-    # for year in (2010, 2024):
+    # for year in (2025, 2025):
     #     create_directories(year)
 
     # 1.: scrape game info, save as pickles
-    # for year in range(2024,2025):
-    #     for week in range(18,19):
+    # for year in range(2025,2026):
+    #     for week in range(1,4):
     #         get_game_info_data_from_boxscores(year, week, week)
     #         time.sleep(2)
 
     # 1a: check pickle
-    # year = 2016 #debug
-    # week = 10 #debug
-    # game_info_list = loadList(f'data/game_data/{year}/week{week}_game_data/week{week}_game_data_14')
+    # year = 2025 #debug
+    # week = 3 #debug
+    # game_info_list = loadList(f'data/game_data/{year}/week{week}_game_data/week{week}_game_data_16')
     # print(game_info_list)
 
     # 2. combine all pickles into one object
-    # for year in range(2024, 2025):
-    #     for week in range(16,18):
+    # for year in range(2025, 2026):
+    #     for week in range(1,4):
     #         print(year, week)
     #         game_info_df = combine_game_info_pickles(year, week)
     #         # print(game_info_df)
@@ -279,17 +283,17 @@ if __name__ == "__main__":
     #         final_df.to_csv(f'data/game_data/{year}/week{week}_game_data/week{week}_game_data.csv', index=False)
 
     #4. Combine all game_info files of one year into one
-    # for year in range(2024,2025):
+    # for year in range(2025,2026):
     #     all_game_data_df = combine_all_game_data(year)
     #     print(all_game_data_df)
     #     all_game_data_df.to_csv(f'data/game_data/{year}/{year}_all_game_data.csv',index=False)
 
-    #5. Combine all years game_info files into one (2010-2024)
+    #5. Combine all years game_info files into one (2010-2025)
     # all_years_game_data_df = combine_all_years_game_data()
     # all_years_game_data_df.to_csv('data/game_data/all_years_game_data.csv', index=False)
 
 
 
-    #6. Weekly weather data
-    get_weekly_weather_data(week)
+    #6. Weekly weather data - work in progress to get weather predictions for upcoming games
+    # get_weekly_weather_data(year,week)
 

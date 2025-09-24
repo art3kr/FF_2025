@@ -11,6 +11,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # To do
 # include Bye weeks from schedule?
+# New source for weekly salaries to scrape (FantasyPros?)
 
 
 '''schemas'''
@@ -442,7 +443,7 @@ def get_all_kickers_table(year):
     return kickers_df
 
 
-def get_all_games_played_table(year=2024):
+def get_all_games_played_table(year=2025):
      
     '''function to get the table of all games scheduled from pro football reference
 
@@ -798,15 +799,17 @@ def combine_all_years_kicker_data():
     return final_df
 
 if __name__ == "__main__":
-    year = 2024
-    week = 16
+    year = 2025
+    week = 4
 	
     # 1. get all players first
     # players = get_all_players_table(year)
     # players.to_csv(f'data/player_data/{year}/{year}_players_df.csv', index=False)
      
     # 2. get fantasy points for each player for each week they played
-    # players_weekly_points_df = get_points_for_each_player(year,week)
+    for week in range(1,week):
+        print(f"Getting data for week {week}")
+        players_weekly_points_df = get_points_for_each_player(year,week)
 
     # 2a. (optional) check pickle object
     # player_data_list = loadList(f'data/player_data/{year}/week{week}/week{week}_player_data_508')
@@ -831,7 +834,7 @@ if __name__ == "__main__":
     # kickers.to_csv(f'data/kicker_data/{year}/{year}_kickers_df.csv', index=False)
 
     # 7. get all games played table (schedule)
-    # for year in range(2024,2025):
+    # for year in range(2025,2026):
     #     schedule_df = get_all_games_played_table(year)
     #     schedule_df.to_csv(f'data/schedules/{year}_schedule_df.csv', index=False)
     #     time.sleep(3)
@@ -849,9 +852,9 @@ if __name__ == "__main__":
     # weekly_kicker_points_df.to_csv(f'data/kicker_data/{year}/week{week}_kicker/week{week}_all_kickers_points.csv',index=False)
 
     #11. combine all kicker data into one giant kicker file for all weeks
-    all_kicker_data_df = combine_all_kicker_data(year)
-    print(all_kicker_data_df)
-    all_kicker_data_df.to_csv(f'data/kicker_data/{year}/{year}_all_kicker_data.csv',index=False)
+    # all_kicker_data_df = combine_all_kicker_data(year)
+    # print(all_kicker_data_df)
+    # all_kicker_data_df.to_csv(f'data/kicker_data/{year}/{year}_all_kicker_data.csv',index=False)
 
     #12. Combine all years game_info files into one (2010-2024)
     # all_years_kicker_data_df = combine_all_years_kicker_data()
