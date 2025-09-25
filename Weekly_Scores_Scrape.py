@@ -12,6 +12,8 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # To do
 # include Bye weeks from schedule?
 # New source for weekly salaries to scrape (FantasyPros?)
+# Get punter data? 
+    # Historical
 
 
 '''schemas'''
@@ -193,7 +195,7 @@ def get_points_for_each_player(year, current_week):
         fpoints_player_ppr = []
 
         player = players_list[i]
-        url = base_url + player_urls_list[i][:-4] + '/fantasy/2024/'
+        url = base_url + player_urls_list[i][:-4] + '/fantasy/{year}/'
 
         print(player, url, i)
 
@@ -798,6 +800,37 @@ def combine_all_years_kicker_data():
 
     return final_df
 
+def get_punting_scoring_data_from_boxscores(year, first_week=1, last_week=18):
+    '''function to get the kicking scoring data for each kicker for all weeks from pro-football-reference
+
+	input: year [int], week [int]
+	output: None
+	'''
+
+    '''load schedule df from csv'''
+    schedule = pd.read_csv(f'data/schedules/{year}_schedule_df.csv')
+    schedule = schedule[(schedule['week'] >= first_week) & (schedule['week'] <= last_week)]
+    
+    '''send request, get html table of players'''
+    base_url = 'https://www.pro-football-reference.com'
+
+    games_urls_list = schedule['boxscore_url'].tolist()
+    weeks_list = schedule['week'].tolist()
+
+    '''create lists'''
+    players = []
+    teams = []
+    years = []
+    weeks = []
+    positions = []
+    fg_distances = []
+
+
+    '''iterate through all games in the schedule_df'''
+    for i in range(len(schedule)):
+        pass
+
+
 if __name__ == "__main__":
     year = 2025
     week = 4
@@ -807,17 +840,17 @@ if __name__ == "__main__":
     # players.to_csv(f'data/player_data/{year}/{year}_players_df.csv', index=False)
      
     # 2. get fantasy points for each player for each week they played
-    for week in range(1,week):
-        print(f"Getting data for week {week}")
-        players_weekly_points_df = get_points_for_each_player(year,week)
+    # for week in range(1,2):
+    #     players_weekly_points_df = get_points_for_each_player(year,week)
 
     # 2a. (optional) check pickle object
-    # player_data_list = loadList(f'data/player_data/{year}/week{week}/week{week}_player_data_508')
+    # player_data_list = loadList(f'data/player_data/{year}/week{week-3}/week{week-3}_player_data_21')
     # print(player_data_list)
 
     # 3. combine all pickles into one object
-    # weekly_points_df = combine_pickles(year, week)
-    # print(weekly_points_df)
+    # for week in range(1,2):
+    #     weekly_points_df = combine_pickles(year, week)
+    #     print(weekly_points_df)
 
     # 4. get defensive scoring
     # defenses_df = get_defenses_scoring_table(year, week)
@@ -847,9 +880,12 @@ if __name__ == "__main__":
     # print(kicker_data_list)-
 
     #9. and #10. combine all kicker pickles into one object, and score kickers
-    # weekly_kicker_points_df = combine_pickles_kickers(year, week)
-    # print(weekly_kicker_points_df)
-    # weekly_kicker_points_df.to_csv(f'data/kicker_data/{year}/week{week}_kicker/week{week}_all_kickers_points.csv',index=False)
+    # for year in range(2010,2011):
+    #     for week in range(1,19):
+    #         print(f"Combining data for year {year}, week {week}")
+    #         weekly_kicker_points_df = combine_pickles_kickers(year, week)
+    #         print(weekly_kicker_points_df)
+    #         weekly_kicker_points_df.to_csv(f'data/kicker_data/{year}/week{week}_kicker/week{week}_all_kickers_points.csv',index=False)
 
     #11. combine all kicker data into one giant kicker file for all weeks
     # all_kicker_data_df = combine_all_kicker_data(year)

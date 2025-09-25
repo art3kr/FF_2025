@@ -15,6 +15,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # Consider reorganizing where I put weekly weather predictions and odds data
 # Get punter data? 
     # Historical
+# use old 2021 code for points allowed by each team to each position - use this for rankings/heatmap
 
 game_info_SCHEMA = [
     'boxscore_url',
