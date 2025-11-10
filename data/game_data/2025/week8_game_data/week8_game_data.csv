@@ -1,0 +1,14 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2025,8,Los Angeles Chargers,Minnesota Vikings,2025-10-23,8:15PM,Los Angeles,/boxscores/202510230sdg.htm,Chargers (deferred),,dome,matrixturf,3:03,"71,094",Los Angeles Chargers -3.5,44.5 (over),,,
+2025,8,Miami Dolphins,Atlanta Falcons,2025-10-26,1:00PM,Atlanta,/boxscores/202510260atl.htm,Dolphins,,retractable roof (closed),fieldturf,2:52,"71,344",Atlanta Falcons -7.0,44.5 (under),,,
+2025,8,Buffalo Bills,Carolina Panthers,2025-10-26,1:00PM,Carolina,/boxscores/202510260car.htm,Bills (deferred),,outdoors,grass,2:55,"73,505",Buffalo Bills -7.0,46.5 (over),63 degrees, relative humidity 36%, wind 9 mph
+2025,8,Baltimore Ravens,Chicago Bears,2025-10-26,1:00PM,Baltimore,/boxscores/202510260rav.htm,Ravens (deferred),,outdoors,grass,3:01,"70,045",Baltimore Ravens -2.5,45.0 (over),60 degrees, relative humidity 38%, wind 2 mph
+2025,8,Houston Texans,San Francisco 49ers,2025-10-26,1:00PM,Houston,/boxscores/202510260htx.htm,49ers (deferred),,retractable roof (closed),astroturf,2:58,"70,581",Houston Texans -2.0,42.0 (under),,,
+2025,8,New York Jets,Cincinnati Bengals,2025-10-26,1:00PM,Cincinnati,/boxscores/202510260cin.htm,Jets (deferred),,outdoors,fieldturf,3:04,"65,526",Cincinnati Bengals -6.5,44.5 (over),57 degrees, relative humidity 48%, wind 8 mph
+2025,8,New England Patriots,Cleveland Browns,2025-10-26,1:00PM,New England,/boxscores/202510260nwe.htm,Browns (deferred),,outdoors,fieldturf,3:00,"64,628",New England Patriots -7.0,41.0 (over),53 degrees, relative humidity 52%, wind 7 mph
+2025,8,Philadelphia Eagles,New York Giants,2025-10-26,1:00PM,Philadelphia,/boxscores/202510260phi.htm,Giants (deferred),,outdoors,grass,2:59,"69,879",Philadelphia Eagles -7.0,44.0 (over),60 degrees, relative humidity 41%, wind 4 mph
+2025,8,Tampa Bay Buccaneers,New Orleans Saints,2025-10-26,4:05PM,New Orleans,/boxscores/202510260nor.htm,Saints,,dome,sportturf,2:59,"70,038",Tampa Bay Buccaneers -3.5,46.5 (under),,,
+2025,8,Indianapolis Colts,Tennessee Titans,2025-10-26,4:25PM,Indianapolis,/boxscores/202510260clt.htm,Colts,,retractable roof (closed),fieldturf,2:57,"65,816",Indianapolis Colts -14.5,48.5 (over),,,
+2025,8,Denver Broncos,Dallas Cowboys,2025-10-26,4:25PM,Denver,/boxscores/202510260den.htm,Broncos,,outdoors,grass,3:07,"75,877",Denver Broncos -3.5,51.0 (over),67 degrees, relative humidity 25%, wind 4 mph
+2025,8,Green Bay Packers,Pittsburgh Steelers,2025-10-26,8:20PM,Pittsburgh,/boxscores/202510260pit.htm,Steelers (deferred),,outdoors,grass,3:11,"67,386",Green Bay Packers -3.0,45.5 (over),46 degrees, relative humidity 56%, wind 5 mph
+2025,8,Kansas City Chiefs,Washington Commanders,2025-10-27,8:15PM,Kansas City,/boxscores/202510270kan.htm,Chiefs (deferred),,outdoors,grass,2:50,"73,569",Kansas City Chiefs -11.0,48.0 (under),54 degrees, relative humidity 94%, wind 8 mph

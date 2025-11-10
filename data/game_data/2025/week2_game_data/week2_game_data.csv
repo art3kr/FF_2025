@@ -1,16 +1,16 @@
 year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
 2025,2,Green Bay Packers,Washington Commanders,2025-09-11,8:15PM,Green Bay,/boxscores/202509110gnb.htm,Commanders (deferred),,outdoors,grass,3:12,"77,289",Green Bay Packers -3.5,48.0 (under),65 degrees, relative humidity 78%, wind 7 mph
-2025,2,Seattle Seahawks,Pittsburgh Steelers,2025-09-14,1:00PM,Pittsburgh,/boxscores/202509140pit.htm,Steelers (deferred),,outdoors,grass,2:56,"66,347",Pittsburgh Steelers -3.0,40.0 (over),79 degrees, relative humidity 46%, wind 5 mph
 2025,2,Buffalo Bills,New York Jets,2025-09-14,1:00PM,New York,/boxscores/202509140nyj.htm,Bills (deferred),,outdoors,fieldturf,2:59,"80,875",Buffalo Bills -6.0,47.5 (under),80 degrees, relative humidity 49%, wind 3 mph
-2025,2,San Francisco 49ers,New Orleans Saints,2025-09-14,1:00PM,New Orleans,/boxscores/202509140nor.htm,49ers (deferred),,dome,sportturf,3:06,"70,078",San Francisco 49ers -3.0,40.5 (over),,,
+2025,2,Detroit Lions,Chicago Bears,2025-09-14,1:00PM,Detroit,/boxscores/202509140det.htm,Bears (deferred),,dome,fieldturf,3:14,"64,201",Detroit Lions -6.5,46.5 (over),,,
+2025,2,Cincinnati Bengals,Jacksonville Jaguars,2025-09-14,1:00PM,Cincinnati,/boxscores/202509140cin.htm,Jaguars,,outdoors,fieldturf,3:11,"65,871",Cincinnati Bengals -3.0,49.0 (over),85 degrees, relative humidity 37%, wind 3 mph
 2025,2,Baltimore Ravens,Cleveland Browns,2025-09-14,1:00PM,Baltimore,/boxscores/202509140rav.htm,Ravens (deferred),,outdoors,grass,3:07,"70,487",Baltimore Ravens -11.5,45.0 (over),82 degrees, relative humidity 49%, wind 3 mph
 2025,2,Dallas Cowboys,New York Giants,2025-09-14,1:00PM,Dallas,/boxscores/202509140dal.htm,Cowboys (deferred),Giants,retractable roof (closed),matrixturf,3:42,"92,781",Dallas Cowboys -5.5,44.5 (over),,,
-2025,2,Cincinnati Bengals,Jacksonville Jaguars,2025-09-14,1:00PM,Cincinnati,/boxscores/202509140cin.htm,Jaguars,,outdoors,fieldturf,3:11,"65,871",Cincinnati Bengals -3.0,49.0 (over),85 degrees, relative humidity 37%, wind 3 mph
 2025,2,New England Patriots,Miami Dolphins,2025-09-14,1:00PM,Miami,/boxscores/202509140mia.htm,Dolphins (deferred),,outdoors,grass,3:07,"65,593",Miami Dolphins -2.0,43.0 (over),89 degrees, relative humidity 56%, wind 4 mph
+2025,2,San Francisco 49ers,New Orleans Saints,2025-09-14,1:00PM,New Orleans,/boxscores/202509140nor.htm,49ers (deferred),,dome,sportturf,3:06,"70,078",San Francisco 49ers -3.0,40.5 (over),,,
 2025,2,Los Angeles Rams,Tennessee Titans,2025-09-14,1:00PM,Tennessee,/boxscores/202509140oti.htm,Rams (deferred),,outdoors,grass,3:07,"59,069",Los Angeles Rams -5.5,41.5 (over),83 degrees, relative humidity 46%, wind 3 mph
-2025,2,Detroit Lions,Chicago Bears,2025-09-14,1:00PM,Detroit,/boxscores/202509140det.htm,Bears (deferred),,dome,fieldturf,3:14,"64,201",Detroit Lions -6.5,46.5 (over),,,
-2025,2,Indianapolis Colts,Denver Broncos,2025-09-14,4:05PM,Indianapolis,/boxscores/202509140clt.htm,Broncos (deferred),,retractable roof (closed),fieldturf,3:03,"63,910",Denver Broncos -1.0,43.5 (over),,,
+2025,2,Seattle Seahawks,Pittsburgh Steelers,2025-09-14,1:00PM,Pittsburgh,/boxscores/202509140pit.htm,Steelers (deferred),,outdoors,grass,2:56,"66,347",Pittsburgh Steelers -3.0,40.0 (over),79 degrees, relative humidity 46%, wind 5 mph
 2025,2,Arizona Cardinals,Carolina Panthers,2025-09-14,4:05PM,Arizona,/boxscores/202509140crd.htm,Cardinals (deferred),,retractable roof (closed),grass,3:16,"64,003",Arizona Cardinals -7.0,44.5 (over),,,
+2025,2,Indianapolis Colts,Denver Broncos,2025-09-14,4:05PM,Indianapolis,/boxscores/202509140clt.htm,Broncos (deferred),,retractable roof (closed),fieldturf,3:03,"63,910",Denver Broncos -1.0,43.5 (over),,,
 2025,2,Philadelphia Eagles,Kansas City Chiefs,2025-09-14,4:25PM,Kansas City,/boxscores/202509140kan.htm,Chiefs (deferred),,outdoors,grass,2:56,"73,558",Philadelphia Eagles -1.0,47.0 (under),88 degrees, relative humidity 46%, wind 12 mph
 2025,2,Atlanta Falcons,Minnesota Vikings,2025-09-14,8:20PM,Minnesota,/boxscores/202509140min.htm,Falcons,,dome,sportturf,2:54,"66,859",Minnesota Vikings -3.0,44.5 (under),,,
 2025,2,Tampa Bay Buccaneers,Houston Texans,2025-09-15,7:00PM,Houston,/boxscores/202509150htx.htm,Buccaneers (deferred),,retractable roof (closed),astroturf,2:56,"71,580",Houston Texans -2.5,42.5 (under),,,

@@ -7,6 +7,7 @@ import time
 import os
 import glob
 import urllib3
+import random
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # To DO:
@@ -16,6 +17,28 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # Get punter data? 
     # Historical
 # use old 2021 code for points allowed by each team to each position - use this for rankings/heatmap
+
+'''request headers'''
+user_agent_list = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0",
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1",
+    ]
+
+headers = {
+    'User-Agent': random.choice(user_agent_list),
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.5',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'DNT': '1',
+    'Connection': 'keep-alive',
+    'Upgrade-Insecure-Requests': '1',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'none',
+    'Sec-Fetch-User': '?1',
+    'Cache-Control': 'max-age=0'
+    }
 
 game_info_SCHEMA = [
     'boxscore_url',
@@ -250,9 +273,130 @@ def get_weekly_weather_data(year,week):
     
     print(classes)
 
+def get_points_allowed(year):
+    '''function to get the table of teams and their points allowed at each position from pro football reference
+
+    input: none
+    output: pandas dataframe
+    '''
+
+    '''send request, get html table of teams and points'''
+    base_url = f'https://www.pro-football-reference.com/years/{year}/fantasy-points-against-'
+
+    positions = ['QB','RB','WR','TE']
+    position_dfs = []
+
+    '''iterate through position tables'''
+    for position in positions:
+
+        r = requests.get(base_url + position + '.htm')
+        soup = BeautifulSoup(r.content, 'html.parser')
+        points_allowed_table_html = soup.find_all('table')[0]
+
+        '''create lists'''
+        teams = []
+        points_allowed_half = []
+
+        '''iterate through html table of players'''
+        for index, row in enumerate(points_allowed_table_html.find_all('tr')[2:]):
+
+            try:
+                '''get team and points allowed'''
+                team = row.find('th', attrs={'data-stat': 'team'}).get_text()
+                point_allowed_half = float(row.find('td', attrs={'data-stat': 'fanduel_points_per_game'}).get_text())
+
+                '''append to lists'''
+                teams.append(team)
+                points_allowed_half.append(point_allowed_half)
+
+            except:
+                pass
+
+        '''create dataframe from lists'''
+        points_allowed_df = pd.DataFrame(
+            list(zip(teams,points_allowed_half)),
+            columns=['team','{}_points_allowed_half'.format(position)])
+
+        '''append dataframe to list of position dfs'''
+        position_dfs.append(points_allowed_df)
+
+    '''concat all position points allowed dfs'''
+    points_allowed_df = reduce(lambda left,right: pd.merge(left,right,on=['team'],how='outer'),position_dfs)
+
+    return points_allowed_df
+
+def get_espn_team_stats(year):
+    '''function to get team stats from ESPN including scoring and 4th/1st down data
+
+    input: year [int]
+    output: pandas dataframe
+    '''
+
+    categories = {'offense total':'',
+                  'offense passing':'/_/stat/passing',
+                  'offense rushing':'/_/stat/rushing',
+                  'offense receiving':'/_/stat/receiving',
+                  'offense downs':'/_/stat/downs',
+                  'defense':'/_/view/defense',
+                  'defense passing':'/_/view/defense/stat/passing',
+                  'defense rushing':'/_/view/defense/stat/rushing',
+                  'defense receiving':'/_/view/defense/stat/receiving',
+                  'defense downs':'/_/view/defense/stat/downs',
+                  'ST returning':'/_/view/special',
+                  'ST kicking':'/_/view/special/stat/kicking',
+                  'ST punting':'/_/view/special/stat/punting',
+                  'turnover':'/_/view/turnovers'
+    }
+
+    '''send request, get html table of teams and points'''
+    base_url = f'https://www.espn.com/nfl/stats/team'
+
+    for category, tail_url in categories.items():
+
+        url = base_url + tail_url
+
+        with requests.Session() as s:
+
+            headers['User-Agent'] = random.choice(user_agent_list)
+
+            r = s.get(url,
+                    verify=False,
+                    headers=headers
+                    )
+            print(r)
+
+            r = requests.get(base_url + tail_url)
+            soup = BeautifulSoup(r.content, 'html.parser')
+
+            print(soup)
+
+            cols = soup.find('th', {'title class': 'Table__TH'})
+            print(cols)
+            # print(team_stats_table_html)
+
+            break
+
+
+            '''iterate through html table of stats'''
+            for index, row in enumerate(team_stats_table_html.find_all('tr')[1:]):
+
+                try:
+                    '''get team and points allowed'''
+
+
+                except:
+                    pass
+
+                ''' merge with schedule or team stats df that already exists'''
+
+
+    return
+    return team_stats_df
+
+
 if __name__ == "__main__":
     year = 2025
-    week = 4
+    week = 9
 
     #step 0: create directories
     # for year in (2025, 2025):
@@ -260,23 +404,23 @@ if __name__ == "__main__":
 
     # 1.: scrape game info, save as pickles
     # for year in range(2025,2026):
-    #     for week in range(1,4):
+    #     for week in range(week,week+1):
     #         get_game_info_data_from_boxscores(year, week, week)
     #         time.sleep(2)
 
     # 1a: check pickle
     # year = 2025 #debug
-    # week = 3 #debug
-    # game_info_list = loadList(f'data/game_data/{year}/week{week}_game_data/week{week}_game_data_16')
+    # week = 8 #debug
+    # game_info_list = loadList(f'data/game_data/{year}/week{week}_game_data/week{week}_game_data_13')
     # print(game_info_list)
 
     # 2. combine all pickles into one object
     # for year in range(2025, 2026):
-    #     for week in range(1,4):
+    #     for week in range(week,week+1):
     #         print(year, week)
     #         game_info_df = combine_game_info_pickles(year, week)
     #         # print(game_info_df)
-            
+
     #         #3. combine game_info with schedule
     #         schedule_df = pd.read_csv(f'data/schedules/{year}_schedule_df.csv')
     #         final_df = pd.merge(schedule_df,game_info_df,on=['boxscore_url'],how='inner')
@@ -294,7 +438,15 @@ if __name__ == "__main__":
     # all_years_game_data_df.to_csv('data/game_data/all_years_game_data.csv', index=False)
 
 
-
     #6. Weekly weather data - work in progress to get weather predictions for upcoming games
     # get_weekly_weather_data(year,week)
+
+    #7 Get points allowed by each team to each position
+    # points_allowed_df = get_points_allowed(year)
+    # print(points_allowed_df)
+    # points_allowed_df.to_csv(f'data/team_data/{year}/{year}_fantasy_points_allowed.csv',index=False)
+
+    #8 Get team scoring and 4th/1st down data from ESPN
+    team_stats_df = get_espn_team_stats(year)
+    # print(team_stats_df)
 

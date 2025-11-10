@@ -1,0 +1,15 @@
+year,week,team_1,team_2,date,time,location,boxscore_url,won_toss,won_OT_toss,roof,surface,duration,attendance,vegas_line,over_under,temp,humidity,wind
+2025,9,Baltimore Ravens,Miami Dolphins,2025-10-30,8:15PM,Miami,/boxscores/202510300mia.htm,Dolphins,,outdoors,grass,2:54,"66,132",Baltimore Ravens -7.5,51.0 (under),73 degrees, relative humidity 57%, wind 5 mph
+2025,9,Atlanta Falcons,New England Patriots,2025-11-02,1:00PM,New England,/boxscores/202511020nwe.htm,Patriots (deferred),,outdoors,fieldturf,2:59,"64,628",New England Patriots -5.0,45.0 (over),52 degrees, relative humidity 51%, wind 7 mph
+2025,9,Carolina Panthers,Green Bay Packers,2025-11-02,1:00PM,Green Bay,/boxscores/202511020gnb.htm,Panthers,,outdoors,grass,3:00,"77,864",Green Bay Packers -13.0,43.0 (under),47 degrees, relative humidity 53%, wind 15 mph
+2025,9,Chicago Bears,Cincinnati Bengals,2025-11-02,1:00PM,Cincinnati,/boxscores/202511020cin.htm,Bears (deferred),,outdoors,fieldturf,3:35,"66,264",Chicago Bears -2.5,51.5 (over),50 degrees, relative humidity 74%, wind 6 mph
+2025,9,Indianapolis Colts,Pittsburgh Steelers,2025-11-02,1:00PM,Pittsburgh,/boxscores/202511020pit.htm,Steelers,,outdoors,grass,3:16,"66,677",Indianapolis Colts -3.0,51.5 (under),56 degrees, relative humidity 66%, wind 2 mph
+2025,9,Denver Broncos,Houston Texans,2025-11-02,1:00PM,Houston,/boxscores/202511020htx.htm,Broncos (deferred),,retractable roof (closed),astroturf,3:22,"70,471",Houston Texans -2.5,40.5 (under),,,
+2025,9,Minnesota Vikings,Detroit Lions,2025-11-02,1:00PM,Detroit,/boxscores/202511020det.htm,Vikings (deferred),,dome,fieldturf,3:12,"64,642",Detroit Lions -9.5,48.0 (over),,,
+2025,9,Los Angeles Chargers,Tennessee Titans,2025-11-02,1:00PM,Tennessee,/boxscores/202511020oti.htm,Chargers (deferred),,outdoors,grass,2:49,"58,592",Los Angeles Chargers -9.5,43.5 (over),46 degrees, relative humidity 84%, wind 5 mph
+2025,9,San Francisco 49ers,New York Giants,2025-11-02,1:00PM,New York,/boxscores/202511020nyg.htm,49ers (deferred),,outdoors,fieldturf,2:53,"83,258",San Francisco 49ers -2.5,48.5 (over),56 degrees, relative humidity 47%, wind 5 mph
+2025,9,Jacksonville Jaguars,Las Vegas Raiders,2025-11-02,4:05PM,Las Vegas,/boxscores/202511020rai.htm,Raiders (deferred),Jaguars,dome,grass,3:22,"62,080",Jacksonville Jaguars -2.5,44.0 (over),,,
+2025,9,New Orleans Saints,Los Angeles Rams,2025-11-02,4:05PM,Los Angeles,/boxscores/202511020ram.htm,Saints,,dome,matrixturf,2:47,"72,055",Los Angeles Rams -14.0,44.0 (push),,,
+2025,9,Kansas City Chiefs,Buffalo Bills,2025-11-02,4:25PM,Buffalo,/boxscores/202511020buf.htm,Chiefs (deferred),,outdoors,a_turf,3:00,"71,024",Kansas City Chiefs -1.5,52.5 (under),54 degrees, relative humidity 55%, wind 6 mph
+2025,9,Seattle Seahawks,Washington Commanders,2025-11-02,8:20PM,Washington,/boxscores/202511020was.htm,Commanders,,outdoors,grass,2:57,"64,197",Seattle Seahawks -3.0,48.0 (over),53 degrees, relative humidity 70%, wind 3 mph
+2025,9,Arizona Cardinals,Dallas Cowboys,2025-11-03,8:15PM,Dallas,/boxscores/202511030dal.htm,Cardinals (deferred),,retractable roof (closed),matrixturf,2:58,"92,211",Dallas Cowboys -3.0,53.5 (under),,,

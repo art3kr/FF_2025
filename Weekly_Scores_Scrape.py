@@ -7,6 +7,7 @@ import glob
 import os
 import time
 import urllib3
+import random
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # To do
@@ -15,6 +16,27 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # Get punter data? 
     # Historical
 
+'''request headers'''
+user_agent_list = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0",
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1",
+    ]
+
+headers = {
+    'User-Agent': random.choice(user_agent_list),
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.5',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'DNT': '1',
+    'Connection': 'keep-alive',
+    'Upgrade-Insecure-Requests': '1',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'none',
+    'Sec-Fetch-User': '?1',
+    'Cache-Control': 'max-age=0'
+            }
 
 '''schemas'''
 player_table_SCHEMA = [
@@ -179,102 +201,103 @@ def get_points_for_each_player(year, current_week):
 
     # get start index from memoized files (if this script has already been run, otherwise index is 0)
     start_index = find_start_index(year, current_week)
-    start_time = time.time()
+    # start_time = time.time()
 
-	
-    '''iterate through all players in the players_df'''
-    for i in range(start_index,len(players_list)):
+    with requests.Session() as s:
 
-        '''create lists for each players'''
-        teams_player = []
-        opponents_player = []
-        dates_player = []
-        years_player = []
-        games = []
-        positions_player = []
-        fpoints_player_ppr = []
+        '''iterate through all players in the players_df'''
+        for i in range(start_index,len(players_list)):
 
-        player = players_list[i]
-        url = base_url + player_urls_list[i][:-4] + '/fantasy/{year}/'
+            '''create lists for each players'''
+            teams_player = []
+            opponents_player = []
+            dates_player = []
+            years_player = []
+            games = []
+            positions_player = []
+            fpoints_player_ppr = []
 
-        print(player, url, i)
+            player = players_list[i]
+            url = base_url + player_urls_list[i][:-4] + f'/fantasy/{year}/'
 
-        # if i % 20 == 0 or i == start_index:
-        #     s = requests.Session()
+            print(player, url, i)
 
-        r = requests.get(url,
-                         verify=False,
-                    # headers = {'User-agent': 'Weekly Fantasy Bot'}
+            headers['User-Agent'] = random.choice(user_agent_list)
+
+            # if i % 20 == 0 or i == start_index:
+            #     s = requests.Session()
+
+            r = s.get(url,
+                        verify=False,
+                        headers=headers
                     )
-        print(r)
-        print(r.headers)
-        soup = BeautifulSoup(r.content, 'html.parser')
-        player_name = soup.find('h1').get_text()
-        print(player_name)
+            print(r)
+            # print(r.headers) #debug
+            soup = BeautifulSoup(r.content, 'html.parser')
+            player_name = soup.find('h1').get_text()
+            print(player_name)
+            # print(soup) #debug
 
-        try:
+            try:
 
-            player_fantasy_table_html = soup.find('table', id="player_fantasy").find('tbody')
-            # print(player_fantasy_table_html)
+                player_fantasy_table_html = soup.find('table', id="player_fantasy").find('tbody')
+                # print(player_fantasy_table_html) #debug
 
-            '''iterate through html table of fantasy stats for player'''
-            for index, row in enumerate(player_fantasy_table_html.find_all('tr')):
+                '''iterate through html table of fantasy stats for player'''
+                for index, row in enumerate(player_fantasy_table_html.find_all('tr')):
 
-                try:
-                    
-                    team = row.find('td', attrs={'data-stat': 'team'}).get_text()
-                    opponent = row.find('td', attrs={'data-stat': 'opp'}).get_text()
-                    date = row.find('td', attrs={'data-stat': 'game_date'}).get_text()
-                    game = int(row.find('td', attrs={'data-stat': 'game_num'}).get_text())
-                    position = row.find('td', attrs={'data-stat': 'starter_pos'}).get_text()
-                    fpoint_ppr = float(row.find('td', attrs={'data-stat': 'draftkings_points'}).get_text())
+                    try:
+                        
+                        team = row.find('td', attrs={'data-stat': 'team'}).get_text()
+                        opponent = row.find('td', attrs={'data-stat': 'opp'}).get_text()
+                        date = row.find('td', attrs={'data-stat': 'game_date'}).get_text()
+                        game = int(row.find('td', attrs={'data-stat': 'game_num'}).get_text())
+                        position = row.find('td', attrs={'data-stat': 'starter_pos'}).get_text()
+                        fpoint_ppr = float(row.find('td', attrs={'data-stat': 'draftkings_points'}).get_text())
 
-                    teams_player.append(team)
-                    opponents_player.append(opponent)
-                    dates_player.append(date)
-                    games.append(game)
-                    positions_player.append(position)
-                    fpoints_player_ppr.append(fpoint_ppr)
-                    years_player.append(year)
-                except:
-                    pass
+                        teams_player.append(team)
+                        opponents_player.append(opponent)
+                        dates_player.append(date)
+                        games.append(game)
+                        positions_player.append(position)
+                        fpoints_player_ppr.append(fpoint_ppr)
+                        years_player.append(year)
+                    except:
+                        pass
+                
 
-            # print(games)
-            # print(positions_player)
-            # print(fpoints_player_ppr)
+                '''append attributes to list'''
+                names.append([player_name]*len(games))
+                teams.append(teams_player)
+                opponents.append(opponents_player)
+                dates.append(dates_player)
+                weeks.append(games)
+                positions.append(positions_player)
+                fpoints_ppr.append(fpoints_player_ppr)
+                years.append(years_player)
 
-            '''append attributes to list'''
-            names.append([player_name]*len(games))
-            teams.append(teams_player)
-            opponents.append(opponents_player)
-            dates.append(dates_player)
-            weeks.append(games)
-            positions.append(positions_player)
-            fpoints_ppr.append(fpoints_player_ppr)
-            years.append(years_player)
+            except:
 
-        except:
+                '''save list as pickle'''
+                end_index = i
+                saveList([names, teams, opponents, dates, years, weeks, positions, fpoints_ppr], f'data/player_data/{year}/week{current_week}/week{current_week}_player_data_{end_index}')
 
-            '''save list as pickle'''
-            end_index = i
-            saveList([names, teams, opponents, dates, years, weeks, positions, fpoints_ppr], f'data/player_data/{year}/week{current_week}/week{current_week}_player_data_{end_index}')
+            time.sleep(4)
+            # num_requests = start_index - i
+            # elapsed_time = abs(time.time() - start_time/60)
+            # requests_per_min = num_requests/elapsed_time #This yields small negative number, need to fix
+            # while requests_per_min > 20:
+            #     print(requests_per_min)
+            #     time.sleep(5)
+            #     elapsed_time = (time.time() - start_time)/60
+            #     requests_per_min = num_requests/elapsed_time  
 
-        time.sleep(4)
-        num_requests = start_index - i
-        elapsed_time = abs(time.time() - start_time/60)
-        requests_per_min = num_requests/elapsed_time #This yields small negative number, need to fix
-        # while requests_per_min > 20:
-        #     print(requests_per_min)
-        #     time.sleep(5)
-        #     elapsed_time = (time.time() - start_time)/60
-        #     requests_per_min = num_requests/elapsed_time  
+            if i % 20 == 0:
+                end_index = i+1
+                saveList([names, teams, opponents, dates, years, weeks, positions, fpoints_ppr], f'data/player_data/{year}/week{current_week}/week{current_week}_player_data_{end_index}')
 
-        if i % 20 == 0:
-            end_index = i+1
-            saveList([names, teams, opponents, dates, years, weeks, positions, fpoints_ppr], f'data/player_data/{year}/week{current_week}/week{current_week}_player_data_{end_index}')
-
-        # if i == start_index + 4:
-        #     break #debug
+            # if i == start_index + 4:
+            #     break #debug
         
 
     '''save list as pickle'''
@@ -833,22 +856,22 @@ def get_punting_scoring_data_from_boxscores(year, first_week=1, last_week=18):
 
 if __name__ == "__main__":
     year = 2025
-    week = 4
+    week = 9
 	
     # 1. get all players first
     # players = get_all_players_table(year)
     # players.to_csv(f'data/player_data/{year}/{year}_players_df.csv', index=False)
      
     # 2. get fantasy points for each player for each week they played
-    # for week in range(1,2):
+    # for week in range(10, 11):
     #     players_weekly_points_df = get_points_for_each_player(year,week)
 
     # 2a. (optional) check pickle object
-    # player_data_list = loadList(f'data/player_data/{year}/week{week-3}/week{week-3}_player_data_21')
+    # player_data_list = loadList(f'data/player_data/{year}/week{week}/week{week}_player_data_467')
     # print(player_data_list)
 
     # 3. combine all pickles into one object
-    # for week in range(1,2):
+    # for week in range(9,10):
     #     weekly_points_df = combine_pickles(year, week)
     #     print(weekly_points_df)
 
@@ -856,7 +879,7 @@ if __name__ == "__main__":
     # defenses_df = get_defenses_scoring_table(year, week)
     # print(defenses_df)
 
-    # 5. combine all players and defensive scoring into one dataframe˜
+    # 5. combine all players and defensive scoring into one dataframe
     # weekly_points_and_defenses_df = pd.concat([weekly_points_df,defenses_df])
     # print(weekly_points_and_defenses_df)
     # weekly_points_and_defenses_df.to_csv(f'data/player_data/{year}/week{week}/week{week}_all_players_points.csv',index=False)
@@ -892,7 +915,7 @@ if __name__ == "__main__":
     # print(all_kicker_data_df)
     # all_kicker_data_df.to_csv(f'data/kicker_data/{year}/{year}_all_kicker_data.csv',index=False)
 
-    #12. Combine all years game_info files into one (2010-2024)
+    #12. Combine all years kicker files into one (2010-2024)
     # all_years_kicker_data_df = combine_all_years_kicker_data()
     # all_years_kicker_data_df.to_csv('data/kicker_data/all_years_kicker_data.csv', index=False)
 
