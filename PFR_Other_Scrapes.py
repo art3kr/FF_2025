@@ -8,6 +8,7 @@ import os
 import glob
 import urllib3
 import random
+import ssl
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # To DO:
@@ -363,7 +364,6 @@ def get_espn_team_stats(year):
                     verify=False,
                     headers=headers
                     )
-            print(r)
 
             r = requests.get(base_url + tail_url)
             soup = BeautifulSoup(r.content, 'html.parser')
@@ -396,7 +396,7 @@ def get_espn_team_stats(year):
 
 if __name__ == "__main__":
     year = 2025
-    week = 9
+    week = 11
 
     #step 0: create directories
     # for year in (2025, 2025):

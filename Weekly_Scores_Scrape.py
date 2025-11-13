@@ -14,6 +14,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # include Bye weeks from schedule?
 # New source for weekly salaries to scrape (FantasyPros?)
 # Get punter data? 
+
     # Historical
 
 '''request headers'''
@@ -856,22 +857,22 @@ def get_punting_scoring_data_from_boxscores(year, first_week=1, last_week=18):
 
 if __name__ == "__main__":
     year = 2025
-    week = 9
+    current_week = 10
 	
     # 1. get all players first
     # players = get_all_players_table(year)
     # players.to_csv(f'data/player_data/{year}/{year}_players_df.csv', index=False)
      
     # 2. get fantasy points for each player for each week they played
-    # for week in range(10, 11):
+    # for week in range(current_week, current_week+1):
     #     players_weekly_points_df = get_points_for_each_player(year,week)
 
     # 2a. (optional) check pickle object
-    # player_data_list = loadList(f'data/player_data/{year}/week{week}/week{week}_player_data_467')
+    # player_data_list = loadList(f'data/player_data/{year}/week{week}/week{week}_player_data_484')
     # print(player_data_list)
 
     # 3. combine all pickles into one object
-    # for week in range(9,10):
+    # for week in range(current_week,current_week+1):
     #     weekly_points_df = combine_pickles(year, week)
     #     print(weekly_points_df)
 
@@ -882,7 +883,7 @@ if __name__ == "__main__":
     # 5. combine all players and defensive scoring into one dataframe
     # weekly_points_and_defenses_df = pd.concat([weekly_points_df,defenses_df])
     # print(weekly_points_and_defenses_df)
-    # weekly_points_and_defenses_df.to_csv(f'data/player_data/{year}/week{week}/week{week}_all_players_points.csv',index=False)
+    # weekly_points_and_defenses_df.to_csv(f'data/player_data/{year}/week{current_week}/week{current_week}_all_players_points.csv',index=False)
 
     # 6. get kickers table
     # kickers = get_all_kickers_table(year)

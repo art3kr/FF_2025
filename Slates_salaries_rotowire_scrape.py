@@ -87,11 +87,11 @@ def find_latest_slate(start_slate=8950):
 ## Main function to execute the process.
 if __name__ == "__main__":
 
-    week = 10
+    week = 11
     # Find the latest valid 'Thu-Mon Classic' slate
     # latest_slate_id = find_latest_slate()
 
-    latest_slate_id = 9006  # Manually set for week 10
+    latest_slate_id = 9069  # Manually set for week 11
     
     # Fetch and append data for the latest slate if found
     if latest_slate_id:
