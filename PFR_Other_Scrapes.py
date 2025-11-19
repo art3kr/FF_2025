@@ -352,46 +352,61 @@ def get_espn_team_stats(year):
     '''send request, get html table of teams and points'''
     base_url = f'https://www.espn.com/nfl/stats/team'
 
-    for category, tail_url in categories.items():
+    final_df = pd.DataFrame()
 
+    for category, tail_url in categories.items():
+        print(f"Getting {category}...")
         url = base_url + tail_url
 
-        with requests.Session() as s:
+        # Randomize UA for each request
+        headers['User-Agent'] = random.choice(user_agent_list)
 
-            headers['User-Agent'] = random.choice(user_agent_list)
+        try:
+            r = requests.get(url, headers=headers, verify=False)
+            
+            if r.status_code != 200:
+                print(f"Failed to retrieve {category}: Status {r.status_code}")
+                continue
 
-            r = s.get(url,
-                    verify=False,
-                    headers=headers
-                    )
+            # Pandas read_html is much easier for ESPN than BS4
+            # ESPN usually splits tables: [0] is Team Names, [1] is Data
+            dfs = pd.read_html(r.content, header=0)
 
-            r = requests.get(base_url + tail_url)
-            soup = BeautifulSoup(r.content, 'html.parser')
+            # print(dfs)
 
-            print(soup)
+            if not dfs:
+                print(f"No tables found for {category}")
+                continue
 
-            cols = soup.find('th', {'title class': 'Table__TH'})
-            print(cols)
-            # print(team_stats_table_html)
+            # Merge the Team Name table with the Stats table
+            # usually dfs[0] is 32 rows of team names, dfs[1] is 32 rows of stats
+            if len(dfs) >= 2:
+                df_team = dfs[0]
+                df_stats = dfs[1]
+                current_df = pd.concat([df_team, df_stats], axis=1)
+            else:
+                current_df = dfs[0]
 
-            break
+            # Merge into final DataFrame
+            if final_df.empty:
+                final_df = current_df
+            else:
+                # Merge on Team Name
+                # Note: ESPN Team names might slightly differ from PFR (e.g. "Arizona" vs "Arizona Cardinals")
+                # You may need a mapping function later, but this merges the ESPN data together.
+                if 'team_name' in current_df.columns and 'team_name' in final_df.columns:
+                    final_df = pd.merge(final_df, current_df, on='team_name', how='outer')
+            
+            # Sleep to be polite and avoid rate limits
+            time.sleep(random.uniform(1.5, 3.0))
+
+        except Exception as e:
+            print(f"Error processing {category}: {e}")
+
+        break
 
 
-            '''iterate through html table of stats'''
-            for index, row in enumerate(team_stats_table_html.find_all('tr')[1:]):
-
-                try:
-                    '''get team and points allowed'''
-
-
-                except:
-                    pass
-
-                ''' merge with schedule or team stats df that already exists'''
-
-
-    return
-    return team_stats_df
+    return final_df
 
 
 if __name__ == "__main__":
@@ -448,5 +463,6 @@ if __name__ == "__main__":
 
     #8 Get team scoring and 4th/1st down data from ESPN
     team_stats_df = get_espn_team_stats(year)
-    # print(team_stats_df)
+    print(team_stats_df)
+    print(team_stats_df.columns)
 
