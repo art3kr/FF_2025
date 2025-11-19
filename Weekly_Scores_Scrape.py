@@ -857,7 +857,7 @@ def get_punting_scoring_data_from_boxscores(year, first_week=1, last_week=18):
 
 if __name__ == "__main__":
     year = 2025
-    current_week = 10
+    current_week = 11
 	
     # 1. get all players first
     # players = get_all_players_table(year)
