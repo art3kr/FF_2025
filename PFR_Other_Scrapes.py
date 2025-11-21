@@ -1,3 +1,4 @@
+import json
 import pandas as pd
 import pickle
 import requests
@@ -9,6 +10,7 @@ import glob
 import urllib3
 import random
 import ssl
+import json
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # To DO:
@@ -333,20 +335,20 @@ def get_espn_team_stats(year):
     output: pandas dataframe
     '''
 
-    categories = {'offense total':'',
-                  'offense passing':'/_/stat/passing',
-                  'offense rushing':'/_/stat/rushing',
-                  'offense receiving':'/_/stat/receiving',
-                  'offense downs':'/_/stat/downs',
-                  'defense':'/_/view/defense',
-                  'defense passing':'/_/view/defense/stat/passing',
-                  'defense rushing':'/_/view/defense/stat/rushing',
-                  'defense receiving':'/_/view/defense/stat/receiving',
-                  'defense downs':'/_/view/defense/stat/downs',
-                  'ST returning':'/_/view/special',
-                  'ST kicking':'/_/view/special/stat/kicking',
-                  'ST punting':'/_/view/special/stat/punting',
-                  'turnover':'/_/view/turnovers'
+    categories = {'Offense Total':'',
+                  'Offense Passing':'/_/stat/passing',
+                  'Offense Rushing':'/_/stat/rushing',
+                  'Offense Receiving':'/_/stat/receiving',
+                  'Offense Downs':'/_/stat/downs',
+                  'Defense Total':'/_/view/defense',
+                  'Defense Passing':'/_/view/defense/stat/passing',
+                  'Defense Rushing':'/_/view/defense/stat/rushing',
+                  'Defense Receiving':'/_/view/defense/stat/receiving',
+                  'Defense Downs':'/_/view/defense/stat/downs',
+                  'ST Returning':'/_/view/special',
+                  'ST Kicking':'/_/view/special/stat/kicking',
+                  'ST Punting':'/_/view/special/stat/punting',
+                  'Turnover':'/_/view/turnovers'
     }
 
     '''send request, get html table of teams and points'''
@@ -367,35 +369,86 @@ def get_espn_team_stats(year):
             if r.status_code != 200:
                 print(f"Failed to retrieve {category}: Status {r.status_code}")
                 continue
+            
+            soup = BeautifulSoup(r.content, 'html.parser')
 
-            # Pandas read_html is much easier for ESPN than BS4
+            # soup = soup.prettify()  # Prettify the HTML for better readability
+            # print(soup)
+
+            # finding the right script tag and converting to json
+            for script_tag in soup.find_all('script'):
+                if script_tag.string and "window['__CONFIG__']" in script_tag.string:
+                    break
+
+            jsonStr = script_tag.string.strip()
+            jsonStr = jsonStr.split("window['__espnfitt__']=")[1].strip()
+            jsonStr = jsonStr[:-1]  # Remove the trailing semicolon if it exists
+            jsonObj = json.loads(jsonStr)
+
+            # Extract team names and abbreviations from the JSON object
+            team_names = [team['team']['displayName'] for team in jsonObj['page']['content']['teamStats']]
+            team_abbreviations = [team['team']['abbrev'] for team in jsonObj['page']['content']['teamStats']]
+
             # ESPN usually splits tables: [0] is Team Names, [1] is Data
             dfs = pd.read_html(r.content, header=0)
-
-            # print(dfs)
+            current_df = dfs[1] if len(dfs) > 1 else dfs[0]
 
             if not dfs:
                 print(f"No tables found for {category}")
                 continue
 
-            # Merge the Team Name table with the Stats table
-            # usually dfs[0] is 32 rows of team names, dfs[1] is 32 rows of stats
-            if len(dfs) >= 2:
-                df_team = dfs[0]
-                df_stats = dfs[1]
-                current_df = pd.concat([df_team, df_stats], axis=1)
+            # Create a list of new column names by combining the Header and Row 0
+            # This is only necessary for: offense total, offense downs, defense downs, ST returning, ST kicking, and turnovers
+            if len(current_df) > 32:
+                new_cols = []
+                for col, row_val in zip(current_df.columns, current_df.iloc[0]):
+                    # Convert to strings
+                    c_str = str(col).strip()
+                    r_str = str(row_val).strip()
+                    
+                    # Filter out pandas-generated junk like 'Unnamed', 'nan', or None
+                    parts = []
+                    if "Unnamed" not in c_str and c_str.lower() != "nan" and c_str:
+                        parts.append(c_str)
+                    if "Unnamed" not in r_str and r_str.lower() != "nan" and r_str:
+                        parts.append(r_str)
+                    
+                    # Join valid parts with an underscore (e.g. "Passing_Yards")
+                    new_cols.append(" ".join(parts))
+
+                current_df.columns = new_cols
+
+                # Drop the first row (which contained the sub-headers) and reset index
+                current_df = current_df.iloc[1:].reset_index(drop=True)
+
+                current_df.columns = [f"{category[:7]} {col}" for col in current_df.columns if "Offense" in category or "Defense" in category]
+
+            
+            # otherwise want to add the category name to the beginning of each column name
             else:
-                current_df = dfs[0]
+                current_df.columns = [f"{category} {col}" for col in current_df.columns]
+
+            # remove .1,.2,.3,.4,.5 if exists in column names
+            current_df.columns = current_df.columns.str.replace(r'\.\d+', '', regex=True)
+
+            print(current_df.head())
+
+            # add team names to the current df
+            current_df['Team'] = team_names
+            current_df['Abbreviation'] = team_abbreviations
 
             # Merge into final DataFrame
             if final_df.empty:
                 final_df = current_df
             else:
+                # drop games played column
+                columns_to_drop = [col for col in current_df.columns if col.endswith('GP')]
+                current_df = current_df.drop(columns=columns_to_drop)
                 # Merge on Team Name
-                # Note: ESPN Team names might slightly differ from PFR (e.g. "Arizona" vs "Arizona Cardinals")
-                # You may need a mapping function later, but this merges the ESPN data together.
-                if 'team_name' in current_df.columns and 'team_name' in final_df.columns:
-                    final_df = pd.merge(final_df, current_df, on='team_name', how='outer')
+                if 'Team' in current_df.columns and 'Team' in final_df.columns:
+                    final_df = pd.merge(final_df, current_df, on=['Team', 'Abbreviation'], how='inner')
+
+            final_df = final_df.rename(columns={'Offense GP': 'GP'})
             
             # Sleep to be polite and avoid rate limits
             time.sleep(random.uniform(1.5, 3.0))
@@ -403,7 +456,7 @@ def get_espn_team_stats(year):
         except Exception as e:
             print(f"Error processing {category}: {e}")
 
-        break
+        # break
 
 
     return final_df
