@@ -464,7 +464,7 @@ def get_espn_team_stats(year):
 
 if __name__ == "__main__":
     year = 2025
-    week = 11
+    week = 12
 
     #step 0: create directories
     # for year in (2025, 2025):
@@ -518,4 +518,8 @@ if __name__ == "__main__":
     team_stats_df = get_espn_team_stats(year)
     print(team_stats_df)
     print(team_stats_df.columns)
+
+    # 9 create mapping table for team names and abbreviations (do one time)
+    # team_mapping_df = team_stats_df[['Team','Abbreviation']].drop_duplicates()
+    # team_mapping_df.to_csv(f'data/mapping_table/team_name_mapping_table.csv', index=False)
 
