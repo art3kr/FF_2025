@@ -1,4 +1,5 @@
 import json
+import sys
 import pandas as pd
 import pickle
 import requests
@@ -421,6 +422,9 @@ def get_espn_team_stats(year):
                 # Drop the first row (which contained the sub-headers) and reset index
                 current_df = current_df.iloc[1:].reset_index(drop=True)
 
+                if category.startswith('ST'):
+                    print(current_df.head())
+
                 current_df.columns = [f"{category[:7]} {col}" for col in current_df.columns if "Offense" in category or "Defense" in category]
 
             
@@ -431,7 +435,7 @@ def get_espn_team_stats(year):
             # remove .1,.2,.3,.4,.5 if exists in column names
             current_df.columns = current_df.columns.str.replace(r'\.\d+', '', regex=True)
 
-            print(current_df.head())
+            # print(current_df.head())
 
             # add team names to the current df
             current_df['Team'] = team_names
@@ -448,15 +452,20 @@ def get_espn_team_stats(year):
                 if 'Team' in current_df.columns and 'Team' in final_df.columns:
                     final_df = pd.merge(final_df, current_df, on=['Team', 'Abbreviation'], how='inner')
 
-            final_df = final_df.rename(columns={'Offense GP': 'GP'})
             
             # Sleep to be polite and avoid rate limits
             time.sleep(random.uniform(1.5, 3.0))
 
         except Exception as e:
             print(f"Error processing {category}: {e}")
+            exc_type, exc_obj, exc_tb = sys.exc_info()
+            print(f"Line: {exc_tb.tb_lineno}")
 
         # break
+
+    final_df = final_df.rename(columns={'Offense GP': 'GP'})
+    final_df = final_df.drop(columns=[col for col in final_df.columns if col.endswith('_x')])
+
 
 
     return final_df
@@ -517,5 +526,6 @@ if __name__ == "__main__":
     #8 Get team scoring and 4th/1st down data from ESPN
     team_stats_df = get_espn_team_stats(year)
     print(team_stats_df)
+    print(list(team_stats_df.columns))
     print(team_stats_df.columns)
 
