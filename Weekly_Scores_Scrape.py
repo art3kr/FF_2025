@@ -419,7 +419,58 @@ def get_defenses_scoring_table(year, week):
     
     return defenses_df
 
+
+def fix_weeks_based_on_schedule_and_byes(players_weekly_points_df, year, week):
+    ''''function to change weeks in players weekly points dataframe based on schedule and add bye weeks
+    input: players_weekly_points_df [pandas dataframe], year [int]
+    output: pandas dataframe'''
+
+    # get schedule df
+    schedule_df = pd.read_csv(f'data/schedules/{year}_schedule_df.csv')
+    schedule_df = schedule_df[schedule_df['week'] <= week]
+
+    # get mapping table df
+    team_mapping_df = pd.read_csv(f'data/mapping_table/team_name_mapping_table.csv')
+
+    # add schedule df
+    schedule_df = schedule_df.merge(team_mapping_df, left_on='team_1', right_on='pfr_team', how='left')
+    schedule_df = schedule_df.rename(columns={'pfr_abbreviation':'team_1_abbreviation'})
+    schedule_df = schedule_df.drop(columns=['espn_team','espn_abbreviation','pfr_team'], axis=1)
+    schedule_df = schedule_df.merge(team_mapping_df, left_on='team_2', right_on='pfr_team', how='left')
+    schedule_df = schedule_df.rename(columns={'pfr_abbreviation':'team_2_abbreviation'})
+    schedule_df = schedule_df.drop(columns=['espn_team','espn_abbreviation','pfr_team'], axis=1)
+
+    # append an inverse of the schedule df to itself
+    inverse_schedule_df = schedule_df.rename(columns={'team_1':'team_2', 'team_2':'team_1', 'team_1_abbreviation':'team_2_abbreviation', 'team_2_abbreviation':'team_1_abbreviation'})
+    schedule_df = pd.concat([schedule_df, inverse_schedule_df], ignore_index=True)
+
+    # remove Defense from players df
+    defenses_df = players_weekly_points_df[players_weekly_points_df['position'] == 'DST']
+    players_weekly_points_df = players_weekly_points_df[players_weekly_points_df['position'] != 'DST']
+
+    # go through each player, adjust weeks if applicable
+    for index, row in players_weekly_points_df.iterrows():
+        player = row['name']
+        team = row['team']
+        opponent = row['opponent']
+        date = row['date']
+        date_fixed = pd.to_datetime(date)
+        date_fixed = str(date_fixed.strftime('%-m/%-d/%y'))
+
+        # get all matches for the game the player played
+        schedule_of_player_df = schedule_df[(schedule_df['team_1_abbreviation'] == team) & (schedule_df['team_2_abbreviation'] == opponent) & (schedule_df['date'] == date_fixed)]
+
+        # change week to match schedule
+        if len(schedule_of_player_df) == 1:
+            players_weekly_points_df.loc[index, 'week'] = schedule_of_player_df['week'].iloc[0]
+
     
+    players_weekly_points_df = pd.concat([players_weekly_points_df, defenses_df], ignore_index=True)
+
+    # TO DO: CONSIDER ADDING BYE WEEKS FOR EACH PLAYER IN PLAYERS_WEEKLY_POINTS_DF
+
+    return players_weekly_points_df
+
 def get_all_kickers_table(year):
     '''function to get the table of all kickers, games played, etc. from pro football reference
 
@@ -530,6 +581,39 @@ def get_all_games_played_table(year=2025):
     schedule_df = pd.DataFrame(
         list(zip(years,weeks,team_1s,team_2s,dates,times,locations,boxscore_urls)),
         columns=schedule_SCHEMA)
+
+    return schedule_df
+
+def add_bye_weeks_to_schedule(schedule_df, year):
+    pass
+    '''function to add bye weeks to schedule dataframe
+    input: schedule_df [pandas dataframe], year [int]
+    output: pandas dataframe'''
+
+    # get mapping table
+    team_mapping_df = pd.read_csv(f'data/mapping_table/team_name_mapping_table.csv')
+    teams_list = team_mapping_df['pfr_team'].tolist()
+
+    # iterate through each week to find bye weeks
+    for week in schedule_df['week'].unique().tolist():
+        week_df = schedule_df[schedule_df['week'] == week]
+        if len(week_df) < 16:
+            teams_in_week = week_df['team_1'].tolist() + week_df['team_2'].tolist()
+            teams_on_bye = [team for team in teams_list if team not in teams_in_week]
+            # print(f'Week {week} bye teams: {teams_on_bye}')
+            # add bye week rows to schedule_df
+            for team in teams_on_bye:
+                new_row = {
+                    'year': year,
+                    'week': week,
+                    'team_1': team,
+                    'team_2': 'BYE',
+                    'date': '',
+                    'time': '',
+                    'location': '',
+                    'boxscore_url': ''
+                }
+                schedule_df = pd.concat([schedule_df, pd.DataFrame([new_row])], ignore_index=True)
 
     return schedule_df
 
@@ -824,40 +908,10 @@ def combine_all_years_kicker_data():
 
     return final_df
 
-def get_punting_scoring_data_from_boxscores(year, first_week=1, last_week=18):
-    '''function to get the kicking scoring data for each kicker for all weeks from pro-football-reference
-
-	input: year [int], week [int]
-	output: None
-	'''
-
-    '''load schedule df from csv'''
-    schedule = pd.read_csv(f'data/schedules/{year}_schedule_df.csv')
-    schedule = schedule[(schedule['week'] >= first_week) & (schedule['week'] <= last_week)]
-    
-    '''send request, get html table of players'''
-    base_url = 'https://www.pro-football-reference.com'
-
-    games_urls_list = schedule['boxscore_url'].tolist()
-    weeks_list = schedule['week'].tolist()
-
-    '''create lists'''
-    players = []
-    teams = []
-    years = []
-    weeks = []
-    positions = []
-    fg_distances = []
-
-
-    '''iterate through all games in the schedule_df'''
-    for i in range(len(schedule)):
-        pass
-
 
 if __name__ == "__main__":
     year = 2025
-    current_week = 11
+    current_week = 12
 	
     # 1. get all players first
     # players = get_all_players_table(year)
@@ -865,7 +919,7 @@ if __name__ == "__main__":
      
     # 2. get fantasy points for each player for each week they played
     # for week in range(current_week, current_week+1):
-    #     players_weekly_points_df = get_points_for_each_player(year,week)
+        # players_weekly_points_df = get_points_for_each_player(year,week)
 
     # 2a. (optional) check pickle object
     # player_data_list = loadList(f'data/player_data/{year}/week{week}/week{week}_player_data_484')
@@ -880,30 +934,42 @@ if __name__ == "__main__":
     # defenses_df = get_defenses_scoring_table(year, week)
     # print(defenses_df)
 
-    # 5. combine all players and defensive scoring into one dataframe
+    # 5. add bye weeks to weekly points dataframe
+    # weekly_points_df = pd.read_csv(f'data/player_data/{year}/week{current_week}/week{current_week}_all_players_points.csv')
+    # weekly_points_df = fix_weeks_based_on_schedule_and_byes(weekly_points_df, year, current_week)
+    # weekly_points_df.to_csv(f'data/player_data/{year}/week{current_week}/week{current_week}_all_players_points_fixed_weeks.csv',index=False)
+
+
+    # 6. combine all players and defensive scoring into one dataframe
     # weekly_points_and_defenses_df = pd.concat([weekly_points_df,defenses_df])
     # print(weekly_points_and_defenses_df)
     # weekly_points_and_defenses_df.to_csv(f'data/player_data/{year}/week{current_week}/week{current_week}_all_players_points.csv',index=False)
 
-    # 6. get kickers table
+    # 7. get kickers table
     # kickers = get_all_kickers_table(year)
     # print(kickers)
     # kickers.to_csv(f'data/kicker_data/{year}/{year}_kickers_df.csv', index=False)
 
-    # 7. get all games played table (schedule)
+    # 8. get all games played table (schedule)
     # for year in range(2025,2026):
     #     schedule_df = get_all_games_played_table(year)
     #     schedule_df.to_csv(f'data/schedules/{year}_schedule_df.csv', index=False)
     #     time.sleep(3)
 
-    #8. scrape kicking data from each game on the schedule
+    # 8b. add bye week to schedule (do one time)
+    # schedule_df = pd.read_csv(f'data/schedules/{year}_schedule_df.csv')
+    # schedule_df = add_bye_weeks_to_schedule(schedule_df, year)
+    # print(schedule_df.tail(40))
+    # schedule_df.to_csv(f'data/schedules/{year}_schedule_df.csv', index=False)
+
+    # 9. scrape kicking data from each game on the schedule
     # get_kicking_scoring_data_from_boxscores(year, week, week)
 
-    # 8a. (optional) check kicker pickle object
+    # 9a. (optional) check kicker pickle object
     # kicker_data_list = loadList(f'data/kicker_data/{year}/week{week}_kicker/week{week}_kicker_data_14')
     # print(kicker_data_list)-
 
-    #9. and #10. combine all kicker pickles into one object, and score kickers
+    #10. and #11. combine all kicker pickles into one object, and score kickers
     # for year in range(2010,2011):
     #     for week in range(1,19):
     #         print(f"Combining data for year {year}, week {week}")
@@ -911,12 +977,12 @@ if __name__ == "__main__":
     #         print(weekly_kicker_points_df)
     #         weekly_kicker_points_df.to_csv(f'data/kicker_data/{year}/week{week}_kicker/week{week}_all_kickers_points.csv',index=False)
 
-    #11. combine all kicker data into one giant kicker file for all weeks
+    #12. combine all kicker data into one giant kicker file for all weeks
     # all_kicker_data_df = combine_all_kicker_data(year)
     # print(all_kicker_data_df)
     # all_kicker_data_df.to_csv(f'data/kicker_data/{year}/{year}_all_kicker_data.csv',index=False)
 
-    #12. Combine all years kicker files into one (2010-2024)
+    #13. Combine all years kicker files into one (2010-2024)
     # all_years_kicker_data_df = combine_all_years_kicker_data()
     # all_years_kicker_data_df.to_csv('data/kicker_data/all_years_kicker_data.csv', index=False)
 

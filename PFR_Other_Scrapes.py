@@ -12,6 +12,8 @@ import urllib3
 import random
 import ssl
 import json
+import sys
+import re
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # To DO:
@@ -422,8 +424,12 @@ def get_espn_team_stats(year):
                 # Drop the first row (which contained the sub-headers) and reset index
                 current_df = current_df.iloc[1:].reset_index(drop=True)
 
+<<<<<<< HEAD
                 if category.startswith('ST'):
                     print(current_df.head())
+=======
+                print(category[:7], len(current_df.columns), current_df.columns) #debug]
+>>>>>>> 7d088b37e42b2fcc4bd04bdf2a4969a3cb09776c
 
                 current_df.columns = [f"{category[:7]} {col}" for col in current_df.columns if "Offense" in category or "Defense" in category]
 
@@ -433,9 +439,15 @@ def get_espn_team_stats(year):
                 current_df.columns = [f"{category} {col}" for col in current_df.columns]
 
             # remove .1,.2,.3,.4,.5 if exists in column names
-            current_df.columns = current_df.columns.str.replace(r'\.\d+', '', regex=True)
+            current_df.columns = [re.sub(r'\.\d+', '', col) for col in current_df.columns]
 
+<<<<<<< HEAD
             # print(current_df.head())
+=======
+            # print(len(current_df.columns), current_df.columns) #debug
+
+            # print(current_df.head()) #debug
+>>>>>>> 7d088b37e42b2fcc4bd04bdf2a4969a3cb09776c
 
             # add team names to the current df
             current_df['Team'] = team_names
@@ -458,8 +470,14 @@ def get_espn_team_stats(year):
 
         except Exception as e:
             print(f"Error processing {category}: {e}")
+<<<<<<< HEAD
             exc_type, exc_obj, exc_tb = sys.exc_info()
             print(f"Line: {exc_tb.tb_lineno}")
+=======
+            _, _, tb = sys.exc_info()
+            lineno = tb.tb_lineno
+            print(f"Exception occurred at line {lineno}")
+>>>>>>> 7d088b37e42b2fcc4bd04bdf2a4969a3cb09776c
 
         # break
 
@@ -473,7 +491,7 @@ def get_espn_team_stats(year):
 
 if __name__ == "__main__":
     year = 2025
-    week = 11
+    week = 13
 
     #step 0: create directories
     # for year in (2025, 2025):
@@ -525,7 +543,15 @@ if __name__ == "__main__":
 
     #8 Get team scoring and 4th/1st down data from ESPN
     team_stats_df = get_espn_team_stats(year)
+<<<<<<< HEAD
     print(team_stats_df)
     print(list(team_stats_df.columns))
+=======
+    # print(team_stats_df)
+>>>>>>> 7d088b37e42b2fcc4bd04bdf2a4969a3cb09776c
     print(team_stats_df.columns)
+
+    # 9 create mapping table for team names and abbreviations (do one time)
+    # team_mapping_df = team_stats_df[['Team','Abbreviation']].drop_duplicates()
+    # team_mapping_df.to_csv(f'data/mapping_table/team_name_mapping_table.csv', index=False)
 
