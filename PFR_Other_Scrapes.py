@@ -69,6 +69,17 @@ def loadList(file):
     open_file.close()
     return loaded_list
 
+def find_start_index(year, week):
+    '''find the starting index from the max memoized file in /game_data'''
+
+    path = os.getcwd() + f'/data/game_data/{year}/week{week}_game_data'
+    file_list = glob.glob(path+'/*')
+    
+    if len(file_list) == 0:
+        return 0
+    index_list = [int(i.split('_')[-1]) for i in file_list]
+    return max(index_list)
+
 def create_directories(year):
     '''function to create directories for game_data, kicker_data and player_data
     input: year [int]
@@ -116,56 +127,65 @@ def get_game_info_data_from_boxscores(year, first_week=1, last_week=18):
     '''create row list'''
     rows = []
 
-    '''iterate through all games in the schedule_df'''
-    for i in range(len(schedule)):
+    ''' get start index from memoized files (if this script has already been run, otherwise index is 0)'''
+    start_index = find_start_index(year, first_week)
 
-        week = weeks_list[i]
-        print(week)
+    with requests.Session() as s:
 
-        '''get html soup'''
-        r = requests.get(base_url + games_urls_list[i], verify=False)
-        soup = BeautifulSoup(r.content, 'lxml')
-        soup2 = BeautifulSoup("\n".join(soup.find_all(string=Comment)), "lxml")
+        '''iterate through all games in the schedule_df'''
+        for i in range(start_index,len(schedule)):
 
-        # print(r.headers) #debug
+            week = weeks_list[i]
+            print(week)
+            url = base_url + str(games_urls_list[i])
 
-        '''get game info table'''
-        game_info_table = soup2.find('table', id="game_info")
+            '''get html soup'''
+            r = s.get(url,
+                        verify=False,
+                        headers=headers
+                    )
+            soup = BeautifulSoup(r.content, 'lxml')
+            soup2 = BeautifulSoup("\n".join(soup.find_all(string=Comment)), "lxml")
 
-        # print(game_info_table)
+            # print(r.headers) #debug
 
-        '''Scrape each row from game info table'''
-        titles = [cell.get_text() for row in game_info_table.find_all('tr') for cell in row.find_all('th')]
-        values = [cell.get_text() for row in game_info_table.find_all('tr') for cell in row.find_all('td')]
+            '''get game info table'''
+            game_info_table = soup2.find('table', id="game_info")
 
-        titles_to_find = ['Won Toss', 'Won OT Toss', 'Roof','Surface','Duration','Weather','Attendance','Vegas Line','Over/Under']
+            # print(game_info_table)
 
-        print(games_urls_list[i])
+            '''Scrape each row from game info table'''
+            titles = [cell.get_text() for row in game_info_table.find_all('tr') for cell in row.find_all('th')]
+            values = [cell.get_text() for row in game_info_table.find_all('tr') for cell in row.find_all('td')]
 
-        '''check if each title is in the list, if it is append corresponding value'''
-        row = []
-        row.append(games_urls_list[i])
-        for title in titles_to_find:
-            if title in titles:
-                row.append(values[titles.index(title)+1])
-            else:
-                row.append('')
+            titles_to_find = ['Won Toss', 'Won OT Toss', 'Roof','Surface','Duration','Weather','Attendance','Vegas Line','Over/Under']
 
-        rows.append(row)
-        
-        time.sleep(2)
+            print(games_urls_list[i])
 
-        if i % 5 == 0:
-            '''save as pickle'''
+            '''check if each title is in the list, if it is append corresponding value'''
+            row = []
+            row.append(games_urls_list[i])
+            for title in titles_to_find:
+                if title in titles:
+                    row.append(values[titles.index(title)+1])
+                else:
+                    row.append('')
+
+            rows.append(row)
+            
+            time.sleep(2)
+
+            if i % 5 == 0:
+                '''save as pickle'''
+                end_index = i+1
+                saveList(rows, f'data/game_data/{year}/week{week}_game_data/week{week}_game_data_{end_index}')
+                
+        '''save as pickle'''
+        try:
             end_index = i+1
             saveList(rows, f'data/game_data/{year}/week{week}_game_data/week{week}_game_data_{end_index}')
-            
-    '''save as pickle'''
-    try:
-        end_index = i+1
-        saveList(rows, f'data/game_data/{year}/week{week}_game_data/week{week}_game_data_{end_index}')
-    except:
-        pass
+        except:
+            pass
 
     return
 
@@ -473,17 +493,18 @@ def get_espn_team_stats(year):
 
 if __name__ == "__main__":
     year = 2025
-    week = 13
+    week = 14
 
     #step 0: create directories
     # for year in (2025, 2025):
     #     create_directories(year)
 
     # 1.: scrape game info, save as pickles
-    # for year in range(2025,2026):
-    #     for week in range(week,week+1):
-    #         get_game_info_data_from_boxscores(year, week, week)
-    #         time.sleep(2)
+    for year in range(2025,2026):
+        for week in range(10,week+1):
+            get_game_info_data_from_boxscores(year, week, week)
+            time.sleep(2)
+
 
     # 1a: check pickle
     # year = 2025 #debug
@@ -524,9 +545,9 @@ if __name__ == "__main__":
     # points_allowed_df.to_csv(f'data/team_data/{year}/{year}_fantasy_points_allowed.csv',index=False)
 
     #8 Get team scoring and 4th/1st down data from ESPN
-    team_stats_df = get_espn_team_stats(year)
+    # team_stats_df = get_espn_team_stats(year)
     # print(team_stats_df)
-    print(team_stats_df.columns)
+    # print(team_stats_df.columns)
 
     # 9 create mapping table for team names and abbreviations (do one time)
     # team_mapping_df = team_stats_df[['Team','Abbreviation']].drop_duplicates()

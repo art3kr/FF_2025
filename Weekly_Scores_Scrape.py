@@ -911,7 +911,7 @@ def combine_all_years_kicker_data():
 
 if __name__ == "__main__":
     year = 2025
-    current_week = 12
+    current_week = 14
 	
     # 1. get all players first
     # players = get_all_players_table(year)
@@ -919,7 +919,7 @@ if __name__ == "__main__":
      
     # 2. get fantasy points for each player for each week they played
     # for week in range(current_week, current_week+1):
-        # players_weekly_points_df = get_points_for_each_player(year,week)
+    #     players_weekly_points_df = get_points_for_each_player(year,week)
 
     # 2a. (optional) check pickle object
     # player_data_list = loadList(f'data/player_data/{year}/week{week}/week{week}_player_data_484')
@@ -931,19 +931,18 @@ if __name__ == "__main__":
     #     print(weekly_points_df)
 
     # 4. get defensive scoring
-    # defenses_df = get_defenses_scoring_table(year, week)
+    # defenses_df = get_defenses_scoring_table(year, current_week)
     # print(defenses_df)
 
-    # 5. add bye weeks to weekly points dataframe
-    # weekly_points_df = pd.read_csv(f'data/player_data/{year}/week{current_week}/week{current_week}_all_players_points.csv')
-    # weekly_points_df = fix_weeks_based_on_schedule_and_byes(weekly_points_df, year, current_week)
-    # weekly_points_df.to_csv(f'data/player_data/{year}/week{current_week}/week{current_week}_all_players_points_fixed_weeks.csv',index=False)
-
-
-    # 6. combine all players and defensive scoring into one dataframe
+    # 5. combine all players and defensive scoring into one dataframe
     # weekly_points_and_defenses_df = pd.concat([weekly_points_df,defenses_df])
     # print(weekly_points_and_defenses_df)
     # weekly_points_and_defenses_df.to_csv(f'data/player_data/{year}/week{current_week}/week{current_week}_all_players_points.csv',index=False)
+
+    # 6. add bye weeks to weekly points dataframe
+    weekly_points_df = pd.read_csv(f'data/player_data/{year}/week{current_week}/week{current_week}_all_players_points.csv')
+    weekly_points_df = fix_weeks_based_on_schedule_and_byes(weekly_points_df, year, current_week)
+    weekly_points_df.to_csv(f'data/player_data/{year}/week{current_week}/week{current_week}_all_players_points.csv',index=False)
 
     # 7. get kickers table
     # kickers = get_all_kickers_table(year)
